@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Tischlerei Hicker · Maßmöbel aus Eichgraben</title>
+<meta name="description" content="Tischlerei Hicker in Eichgraben: Maßmöbel, Türen, Fenster, Stiegen und mehr. Familienbetrieb seit 1990, heute in zweiter Generation. Beratung, Planung, Produktion und Montage aus einer Hand.">
+<meta name="theme-color" content="#191310">
+<meta property="og:title" content="Tischlerei Hicker · Maßmöbel aus Eichgraben">
+<meta property="og:description" content="Familienbetrieb seit 1990. Maßmöbel, Türen, Fenster und Stiegen, geplant und gebaut in Eichgraben.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marcste2.github.io/tischlerei-hicker/">
+<meta property="og:image" content="https://marcste2.github.io/tischlerei-hicker/assets/hero-poster.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono&family=Instrument+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --canvas:#191310;
+  --panel:#241b15;
+  --panel2:#2b211a;
+  --accent:#d99a4e;
+  --accent-hover:#e8b066;
+  --accent-muted:#8a5f33;
+  --green:#4d6f5e;
+  --text-primary:#f4ecdf;
+  --text-secondary:#cbbba6;
+  --text-dim:#a4947e;
+  --line:rgba(212,178,134,.15);
+  --line-strong:rgba(217,154,78,.55);
+  --tshadow:0 1px 2px rgba(10,6,3,.95),0 3px 12px rgba(10,6,3,.78),0 10px 44px rgba(10,6,3,.8);
+  --ease:cubic-bezier(.22,.61,.2,1);
+  --ease-io:cubic-bezier(.65,.05,.36,1);
+  --heroH:780vh;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden;overflow-x:clip}
+body{
+  background:var(--canvas);
+  color:var(--text-primary);
+  font-family:"Instrument Sans",system-ui,sans-serif;
+  font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:-22%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 46% 34% at 24% 18%,rgba(217,154,78,.075),transparent 68%),
+    radial-gradient(ellipse 40% 30% at 78% 82%,rgba(77,111,94,.06),transparent 70%),
+    radial-gradient(ellipse 60% 46% at 60% 40%,rgba(244,236,223,.022),transparent 72%);
+  animation:envDrift 96s var(--ease-io) -30s infinite alternate;
+}
+@keyframes envDrift{
+  0%{transform:translate3d(-2.5%,-1.5%,0) scale(1)}
+  50%{transform:translate3d(1.5%,2%,0) scale(1.05)}
+  100%{transform:translate3d(3%,-2%,0) scale(1.02)}
+}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+::selection{background:var(--accent-muted);color:var(--text-primary)}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--accent);color:#1c1206;padding:10px 16px;border-radius:8px;font-weight:500;transition:top .25s var(--ease)}
+.skip:focus{top:12px;color:#1c1206}
+
+/* ---------- Nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;gap:28px;
+  padding:14px clamp(18px,4vw,44px);
+  transition:background .45s var(--ease),border-color .45s var(--ease),padding .45s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{background:rgba(25,19,16,.82);backdrop-filter:blur(14px);border-color:var(--line);padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text-primary)}
+.brand:hover{color:var(--text-primary)}
+.brand .logo-img{height:54px;width:auto;flex:none;transition:height .45s var(--ease)}
+.nav.scrolled .logo-img{height:44px}
+.brand-name{font-family:"Fraunces",serif;font-size:19px;letter-spacing:.01em;white-space:nowrap}
+.brand-name b{font-weight:600}
+.nav-links{display:flex;gap:26px;margin-left:auto;align-items:baseline}
+.nav-links a{color:var(--text-secondary);font-size:15px;letter-spacing:.02em;transition:color .3s var(--ease)}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-tel{color:var(--text-dim);font-size:13.5px;margin-left:6px;white-space:nowrap}
+.nav .btn{margin-left:8px}
+@media (max-width:900px){.nav-links,.nav-tel{display:none}.nav .btn{margin-left:auto}}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;background:var(--accent);color:#1c1206;font-weight:500;font-size:15.5px;
+  padding:12px 24px;border-radius:10px;border:1px solid transparent;cursor:pointer;
+  transition:background .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);
+  text-shadow:none;
+}
+.btn:hover{background:var(--accent-hover);color:#1c1206;transform:translateY(-1px);box-shadow:0 10px 30px -12px rgba(217,154,78,.55)}
+.btn-secondary{background:transparent;color:var(--text-primary);border-color:var(--line-strong)}
+.btn-secondary:hover{background:rgba(217,154,78,.1);color:var(--text-primary);box-shadow:none}
+@media (pointer:coarse){.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;height:var(--heroH)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--canvas)}
+.poster{position:absolute;inset:0;background-size:cover;background-position:center}
+#heroVid{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .8s var(--ease);transform:translateZ(0);
+}
+.stage.video-ready #heroVid{opacity:1}
+.stage.video-failed #heroVid{display:none}
+.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(12,8,5,0) 35%,rgba(12,8,5,.62) 100%)}
+.ring{position:absolute;right:26px;bottom:26px;width:44px;height:44px;color:var(--accent);transform:rotate(-90deg);opacity:.9}
+.ring circle{transition:stroke-dashoffset .15s linear}
+.stage.video-ready .ring{display:none}
+
+.ki-tag{
+  position:absolute;right:6px;bottom:5px;z-index:3;pointer-events:none;
+  font-family:"IBM Plex Mono",monospace;font-size:7.5px;letter-spacing:.04em;
+  color:rgba(244,236,223,.4);background:rgba(12,8,5,.26);
+  padding:1px 5px;border-radius:4px;
+}
+.stage .ki-tag{right:auto;left:7px;bottom:6px}
+.cue{
+  position:absolute;left:50%;bottom:22px;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text-secondary);
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  opacity:0;transition:opacity 1s var(--ease);text-shadow:var(--tshadow);
+}
+.stage.cue-on .cue{opacity:.85}
+.stage.cue-off .cue{opacity:0}
+.cue svg{width:18px;height:18px;animation:cueBob 2.6s var(--ease-io) -1.2s infinite}
+@keyframes cueBob{0%,100%{transform:translateY(0);opacity:.9}50%{transform:translateY(7px);opacity:.4}}
+
+.dust{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.dust i{
+  position:absolute;width:3px;height:3px;border-radius:50%;
+  background:rgba(232,176,102,.5);filter:blur(.6px);
+  animation:dustDrift 12s linear infinite;
+}
+.dust i:nth-child(1){left:18%;top:34%;animation-delay:-2s}
+.dust i:nth-child(2){left:64%;top:22%;width:2px;height:2px;animation-delay:-5s;animation-duration:15s}
+.dust i:nth-child(3){left:78%;top:58%;animation-delay:-8s}
+.dust i:nth-child(4){left:36%;top:66%;width:2px;height:2px;animation-delay:-11s;animation-duration:17s}
+.dust i:nth-child(5){left:50%;top:44%;animation-delay:-6.5s;animation-duration:14s}
+@keyframes dustDrift{
+  0%{transform:translate3d(0,0,0);opacity:0}
+  12%{opacity:.7}
+  88%{opacity:.5}
+  100%{transform:translate3d(46px,-72px,0);opacity:0}
+}
+
+/* Bands */
+.band{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+  padding:0 clamp(22px,6vw,90px);pointer-events:none;opacity:0;
+  text-shadow:var(--tshadow);
+}
+.band::before{
+  content:"";position:absolute;inset:-4%;pointer-events:none;
+  opacity:calc(.25 + .75*var(--k,1));
+  background:radial-gradient(ellipse 72% 62% at var(--sx,32%) var(--sy,50%),rgba(10,6,4,var(--sa,.62)) 0%,rgba(10,6,4,calc(var(--sa,.62)*.74)) 46%,rgba(10,6,4,0) 78%);
+}
+.band>*{position:relative;max-width:620px}
+.band .h{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(34px,5.2vw,64px);line-height:1.12;letter-spacing:.002em}
+.band .sub{color:#e6dbc6;font-size:clamp(16px,1.6vw,20px);margin-top:18px;max-width:44ch}
+.kicker{
+  display:inline-block;align-self:flex-start;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--text-secondary);margin-bottom:22px;padding:8px 14px;border-radius:10px;
+  background:rgba(14,9,6,.55);border:1px solid rgba(150,120,86,.3);backdrop-filter:blur(10px);
+  text-shadow:0 1px 3px rgba(10,6,3,.85);
+}
+.b1{--sx:30%;--sy:44%;--sa:.66;align-items:flex-start}
+.b2{--sx:30%;--sy:64%;--sa:.74;justify-content:flex-end;padding-bottom:16vh;align-items:flex-start}
+.b3{--sx:70%;--sy:48%;--sa:.76;align-items:flex-end;text-align:right}
+.b4{--sx:30%;--sy:64%;--sa:.76;justify-content:flex-end;padding-bottom:16vh;align-items:flex-start}
+.b5{--sx:32%;--sy:38%;--sa:.82;align-items:flex-start;justify-content:flex-start;padding-top:18vh}
+
+/* Entrance a: blur-to-sharp (band 1) */
+.blur-wrap{position:relative}
+.blur-wrap .soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k,0))}
+.blur-wrap .sharp{opacity:var(--k,0)}
+/* Entrance b: approach-from-depth (band 2) */
+.b2 .h{opacity:var(--k,0);transform:scale(calc(.86 + .14*var(--k,0)));transform-origin:left bottom}
+/* Entrance c: word-punch (band 3) */
+.b3 .w{
+  display:inline-block;
+  --kc:clamp(0,calc((var(--k,0) - var(--th,0))*3),1);
+  --ks:clamp(0,calc((var(--k,0) - var(--th,0) - var(--sd,.1))*var(--ss,3.2)),1);
+  opacity:var(--kc);
+  transform:scale(calc(.6 + (0.4 + var(--ov,.12))*var(--kc) - var(--ov,.12)*var(--ks)));
+}
+.b3 .w.em{--ov:.24;--sd:.16;--ss:2.6;color:var(--accent)}
+/* Entrance d: scatter (band 4) */
+.b4 .c{
+  display:inline-block;
+  --kc:clamp(0,calc((var(--k,0) - var(--th,0))*2.6),1);
+  opacity:var(--kc);
+  transform:translate(calc((1 - var(--kc))*var(--jx,0px)),calc((1 - var(--kc))*var(--jy,0px))) rotate(calc((1 - var(--kc))*var(--jr,0deg)));
+}
+.b4 .w{display:inline-block;white-space:nowrap}
+/* Entrance e: staged settle (band 5) */
+.b5 .w{
+  display:inline-block;
+  --kc:clamp(0,calc((var(--k,0) - var(--th,0))*3.4),1);
+  opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc))*26px));
+}
+.b5 .sub{opacity:var(--ksub,0);transform:translateY(calc((1 - var(--ksub,0))*14px))}
+.b5 .cta-row{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;opacity:var(--kb,0);transform:translateY(calc((1 - var(--kb,0))*12px));pointer-events:none}
+.band.b5.live .cta-row{pointer-events:auto}
+
+/* Static hero (designed, gated) */
+.static-hero{display:none}
+@media (max-width:720px),(orientation:portrait) and (max-width:1024px),(orientation:portrait) and (pointer:coarse),(orientation:landscape) and (pointer:coarse) and (max-height:560px),(prefers-reduced-motion:reduce){
+  .hero{height:100vh;height:100svh}
+  .bands,.ring,.cue,#heroVid,.dust{display:none}
+  .stage{background:var(--canvas) url('assets/hero-poster.jpg') 62% 50%/cover no-repeat}
+  .static-hero{
+    display:flex;position:absolute;inset:0;flex-direction:column;justify-content:flex-end;
+    padding:0 clamp(22px,6vw,90px) clamp(60px,12vh,110px);
+    background:linear-gradient(180deg,rgba(25,19,16,.14) 30%,rgba(25,19,16,.78) 78%,var(--canvas) 100%);
+  }
+  .static-hero .kicker{margin-bottom:16px}
+  .static-hero .h{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(34px,9vw,54px);line-height:1.12;text-shadow:var(--tshadow)}
+  .static-hero .sub{color:var(--text-secondary);margin-top:14px;max-width:46ch;text-shadow:var(--tshadow)}
+  .static-hero .cta-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+}
+@media (max-height:560px){.cue,.kicker{display:none}}
+
+/* ---------- Sections ---------- */
+main{position:relative;z-index:1;background:var(--canvas)}
+section{padding:clamp(84px,11vw,150px) clamp(20px,5vw,60px);position:relative;scroll-margin-top:64px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.14;letter-spacing:.002em;max-width:22ch}
+.lede{color:var(--text-secondary);margin-top:16px;font-size:clamp(16px,1.4vw,19px);max-width:56ch}
+
+.divider{display:flex;justify-content:center;padding:0 20px;position:relative;z-index:1;background:var(--canvas)}
+.divider svg{width:min(340px,72vw);height:44px;color:var(--accent-muted);opacity:.85}
+.divider path{stroke-dasharray:var(--len,600);stroke-dashoffset:var(--len,600);transition:stroke-dashoffset 1.6s var(--ease)}
+.divider.in path{stroke-dashoffset:0}
+.divider path:nth-child(2){transition-delay:.25s}
+.divider path:nth-child(3){transition-delay:.5s}
+
+/* Entrance choreography below the fold */
+.reveal .part{opacity:0;transform:translateY(16px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in .part{opacity:1;transform:none}
+.reveal.in .part:nth-child(2){transition-delay:.1s}
+.reveal.in .part:nth-child(3){transition-delay:.2s}
+.reveal.in .part:nth-child(4){transition-delay:.3s}
+.reveal.in .part:nth-child(5){transition-delay:.4s}
+.reveal.in .part:nth-child(6){transition-delay:.5s}
+.reveal.settled .part:nth-child(n){transition-delay:0s}
+
+/* Leistungen */
+.svc-grid{display:grid;grid-template-columns:7fr 5fr;gap:22px;margin-top:52px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.card .img{position:relative;overflow:hidden}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:transform 6s var(--ease)}
+.card:hover .img img{transform:scale(1.035)}
+.card .txt{padding:26px 28px 30px}
+.card h3{font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin-bottom:6px}
+.card .tag{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.svc-list{list-style:none;margin-top:14px;column-gap:28px}
+.svc-list li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--text-secondary);display:flex;gap:10px;align-items:baseline}
+.svc-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent-muted);flex:none;transform:translateY(-1px)}
+.svc-list li:last-child{border-bottom:0}
+.svc-main .img{height:340px}
+.svc-main{position:relative}
+.svc-main::after{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:18px;
+  background:linear-gradient(115deg,transparent 30%,rgba(232,176,102,.06) 50%,transparent 70%);
+  background-size:260% 100%;opacity:0;
+}
+.anim .svc-main::after{opacity:1;animation:sheen 9s var(--ease-io) -2s infinite}
+@keyframes sheen{0%{background-position:120% 0}55%{background-position:-60% 0}100%{background-position:-60% 0}}
+.svc-side{display:grid;gap:22px}
+.svc-side .img{height:170px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+@media (max-width:920px){.svc-grid{grid-template-columns:1fr}.svc-main .img{height:260px}}
+@media (max-width:560px){.two-col{grid-template-columns:1fr}}
+
+/* Ablauf */
+.flow{display:grid;grid-template-columns:6.5fr 5.5fr;gap:clamp(30px,5vw,70px);margin-top:52px;align-items:start}
+.steps{position:relative;padding-left:56px}
+.steps svg{position:absolute;left:14px;top:8px;height:calc(100% - 16px);width:10px;overflow:visible}
+.steps svg path{stroke:var(--accent-muted);stroke-width:2.5;fill:none}
+.steps svg circle{fill:var(--accent)}
+.step{padding:0 0 42px;position:relative}
+.step:last-child{padding-bottom:0}
+.step .n{position:absolute;left:-56px;top:0;width:30px;height:30px;border-radius:50%;background:var(--panel2);border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-size:12.5px;color:var(--accent)}
+.step h3{font-family:"Fraunces",serif;font-weight:600;font-size:22px;margin-bottom:6px}
+.step p{color:var(--text-secondary);max-width:46ch}
+.planner{position:sticky;top:90px}
+.planner .img{height:300px}
+.planner .img img{filter:sepia(.14) contrast(1.02)}
+.planner .txt p{color:var(--text-secondary);margin:8px 0 20px;max-width:44ch}
+@media (max-width:920px){.flow{grid-template-columns:1fr}.planner{position:static}}
+
+/* Jahresringe */
+.rings-grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(30px,5vw,60px);margin-top:52px;align-items:center}
+.rings-fig{position:relative;display:flex;justify-content:center}
+.rings-fig svg{width:min(430px,86vw);height:auto;overflow:visible}
+.rings-fig ellipse{fill:none;stroke:var(--accent-muted);stroke-width:2}
+.rings-fig .r-core{fill:var(--accent)}
+.milestones{list-style:none;display:grid;gap:0}
+.milestones li{
+  display:grid;grid-template-columns:86px 1fr;gap:18px;padding:16px 0;
+  border-bottom:1px solid var(--line);align-items:baseline;
+  opacity:.32;transform:translateX(8px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+.milestones li.lit{opacity:1;transform:none}
+.milestones li:last-child{border-bottom:0}
+.milestones .y{font-family:"IBM Plex Mono",monospace;color:var(--accent);font-size:15px}
+.milestones p{color:var(--text-secondary)}
+.team-card{margin-top:56px}
+.team-card .img{aspect-ratio:3/2}
+.team-card .img img{width:100%;height:100%;object-fit:cover}
+.ms-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;float:right;margin:2px 0 6px 14px;border:1px solid var(--line-strong)}
+.hist-photo{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.hist-photo .card .img{aspect-ratio:3/2}
+.hist-photo .card:first-child .img img{filter:sepia(.28) contrast(.98)}
+.hist-photo .caption{padding:14px 18px;font-size:12.5px;color:var(--text-dim);border-top:1px solid var(--line)}
+@media (max-width:920px){.rings-grid{grid-template-columns:1fr}.hist-photo{grid-template-columns:1fr}}
+
+/* Der letzte Schliff (Interaktion) */
+.sand{margin-top:64px;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,4vw,44px);position:relative;overflow:hidden}
+.sand h3{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(22px,2.4vw,30px)}
+.sand .hint{color:var(--text-dim);font-size:13.5px;margin-top:6px}
+.sand-stage{
+  margin-top:26px;height:190px;border-radius:14px;position:relative;overflow:hidden;
+  cursor:pointer;border:1px solid var(--line-strong);touch-action:none;
+  background:
+    repeating-linear-gradient(93deg,#5b4226 0 7px,#654a2b 7px 13px,#573f24 13px 22px,#61472a 22px 30px),
+    linear-gradient(180deg,#5e4527,#4e3920);
+}
+.sand-stage:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sand-rough{
+  position:absolute;inset:0;opacity:calc(1 - var(--p,0));
+  background:
+    repeating-linear-gradient(1deg,rgba(28,18,8,.42) 0 2px,transparent 2px 5px),
+    repeating-linear-gradient(-2deg,rgba(20,12,5,.3) 0 1px,transparent 1px 7px),
+    repeating-linear-gradient(90deg,rgba(120,90,55,.35) 0 3px,rgba(60,42,22,.4) 3px 6px);
+  filter:saturate(.55) brightness(.82);
+}
+.sand-oil{
+  position:absolute;inset:0;opacity:var(--p,0);
+  background:
+    radial-gradient(ellipse 70% 130% at 50% 50%,rgba(232,176,102,.22),transparent 70%),
+    repeating-linear-gradient(93deg,rgba(244,222,190,.11) 0 2px,transparent 2px 9px);
+}
+.sand-rings{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:calc(var(--p,0)*var(--p,0))}
+.sand-rings svg{height:150%;width:auto;color:rgba(244,222,190,.5)}
+.sand-shine{
+  position:absolute;top:0;bottom:0;width:120px;left:calc(var(--p,0)*115% - 60px);
+  background:linear-gradient(100deg,transparent,rgba(255,230,190,.28),transparent);
+}
+.sand-label{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,236,223,.9);
+  text-shadow:0 1px 6px rgba(10,6,3,.9);opacity:calc(1 - var(--p,0)*1.6);pointer-events:none;
+}
+.counters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.counter{opacity:.28;transform:translateY(8px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.counter.on{opacity:1;transform:none}
+.counter .v{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(26px,3.4vw,42px);color:var(--accent)}
+.counter .l{color:var(--text-dim);font-size:13.5px;margin-top:2px}
+@media (max-width:640px){.counters{grid-template-columns:1fr;gap:10px}.sand-stage{height:150px}}
+
+/* Stimmen */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;align-items:stretch}
+.quote{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column}
+.quote.wide{grid-column:span 2}
+.quote:nth-child(2){transform:translateY(18px)}
+.quote:nth-child(4){transform:translateY(18px)}
+.quote .stars{color:var(--accent);letter-spacing:3px;font-size:15px;margin-bottom:14px;display:inline-block}
+.anim .quote:first-child .stars{animation:starGlow 8s var(--ease-io) -3s infinite}
+@keyframes starGlow{0%,78%,100%{text-shadow:none}86%{text-shadow:0 0 14px rgba(232,176,102,.85)}}
+.quote blockquote{font-family:"Fraunces",serif;font-style:italic;font-size:18px;line-height:1.55}
+.quote.wide blockquote{font-size:17.5px}
+.quote figcaption{margin-top:auto;padding-top:16px;color:var(--text-dim);font-size:13.5px}
+.gbadge{
+  display:inline-flex;align-items:baseline;gap:12px;margin-top:22px;padding:10px 18px;
+  background:var(--panel2);border:1px solid var(--line);border-radius:12px;font-size:14px;color:var(--text-secondary);
+}
+.gbadge b{color:var(--text-primary);font-size:16px}
+@media (max-width:920px){.quotes{grid-template-columns:1fr}.quotes .quote{transform:none}.quote.wide{grid-column:auto}}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:22px 44px 22px 2px;position:relative;
+  font-family:"Fraunces",serif;font-weight:600;font-size:19.5px;
+  transition:color .3s var(--ease);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--accent-hover)}
+.faq summary::after{
+  content:"";position:absolute;right:8px;top:50%;width:12px;height:12px;
+  border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);
+  transform:translateY(-70%) rotate(45deg);transition:transform .4s var(--ease);
+}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.faq details p{color:var(--text-secondary);padding:0 2px 24px;max-width:62ch;animation:faqIn .5s var(--ease)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* Kontakt */
+.kontakt-band{border-radius:20px;overflow:hidden;margin-bottom:56px;position:relative;border:1px solid var(--line)}
+.kontakt-band img{width:100%;height:240px;object-fit:cover;object-position:center 62%}
+.kontakt-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,19,16,.25),rgba(25,19,16,.7))}
+.kontakt-band .over{position:absolute;left:26px;bottom:20px;z-index:1;font-family:"Fraunces",serif;font-style:italic;font-size:clamp(18px,2.4vw,26px);color:var(--text-primary);text-shadow:var(--tshadow)}
+.k-grid{display:grid;grid-template-columns:6.5fr 5.5fr;gap:clamp(30px,5vw,70px);align-items:start}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;letter-spacing:.06em;color:var(--text-dim);margin-bottom:7px}
+.field input,.field textarea{
+  width:100%;background:var(--panel);border:1px solid var(--line-strong);border-radius:10px;
+  color:var(--text-primary);padding:13px 15px;font:inherit;font-size:15.5px;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(217,154,78,.18)}
+.field textarea{min-height:140px;resize:vertical}
+.form-note{font-size:12.5px;color:var(--text-dim);margin:14px 0 18px;max-width:52ch}
+.form-ok{display:none;background:rgba(77,111,94,.14);border:1px solid var(--green);border-radius:12px;padding:16px 18px;color:var(--text-secondary);margin-top:18px}
+.form-ok.show{display:block}
+.k-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px}
+.k-card h3{font-family:"Fraunces",serif;font-weight:600;font-size:21px;margin-bottom:16px}
+.k-card .big-tel{font-family:"Fraunces",serif;font-size:clamp(22px,2.4vw,30px);color:var(--text-primary);display:inline-block;margin:2px 0 4px}
+.k-card .big-tel:hover{color:var(--accent-hover)}
+.k-line{padding:13px 0;border-bottom:1px solid var(--line);color:var(--text-secondary);font-size:15.5px}
+.k-line:last-child{border-bottom:0}
+.k-line .lbl{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);margin-bottom:3px}
+.hours{width:100%;border-collapse:collapse;margin-top:4px}
+.hours td{padding:6px 0;color:var(--text-secondary);font-size:15px}
+.hours td:last-child{text-align:right;font-family:"IBM Plex Mono",monospace;font-size:13.5px;color:var(--text-primary)}
+@media (max-width:920px){.k-grid{grid-template-columns:1fr}form .row{grid-template-columns:1fr}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:48px clamp(20px,5vw,60px) 40px;position:relative;z-index:1;background:var(--canvas)}
+.f-wrap{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;justify-content:space-between}
+.logo-full{width:175px;height:auto;display:block;opacity:.95}
+.f-col{font-size:14px;color:var(--text-dim);line-height:1.9}
+.f-col a{color:var(--text-secondary)}
+.f-col a:hover{color:var(--accent-hover)}
+.f-note{width:100%;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;font-size:12.5px;color:var(--text-dim)}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
+  .reveal .part{opacity:1;transform:none}
+  .divider path{stroke-dashoffset:0}
+  .milestones li{opacity:1;transform:none}
+  .counter{opacity:1;transform:none}
+  .quote:nth-child(2){transform:translateY(18px)}
+  .quote:nth-child(4){transform:translateY(18px)}
+  @media (max-width:920px){.quotes .quote{transform:none}}
+  .sand-stage{cursor:default}
+  .sand [style*="--p"]{--p:1}
+  .sand-rough{opacity:0}
+  .sand-oil{opacity:1}
+  .sand-rings{opacity:1}
+  .sand-label{opacity:0}
+  .counter{opacity:1}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<header>
+<nav class="nav" id="nav" aria-label="Hauptnavigation">
+  <a class="brand" href="#top" aria-label="Tischlerei Hicker, zum Seitenanfang">
+    <img class="logo-img" src="assets/logo-full.png" alt="" width="57" height="54">
+    <span class="brand-name">Tischlerei <b>Hicker</b></span>
+  </a>
+  <div class="nav-links">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ablauf">Ablauf</a>
+    <a href="#ueber">Über uns</a>
+    <a href="#stimmen">Stimmen</a>
+  </div>
+  <a class="nav-tel mono" href="tel:+43277343347">+43 2773 43347</a>
+  <a class="btn" href="#kontakt">Projekt anfragen</a>
+</nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="stage" id="stage">
+    <div class="poster" id="poster" aria-hidden="true"></div>
+    <video id="heroVid" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+    <div class="bands" aria-hidden="true">
+      <div class="band b1" data-a="0" data-b="0.14">
+        <p class="kicker mono">Tischlerei Hicker · Schießstättenstraße 1, Eichgraben</p>
+        <div class="h blur-wrap">
+          <div class="soft">Hier entsteht Handwerk.</div>
+          <div class="sharp">Hier entsteht Handwerk.</div>
+        </div>
+      </div>
+      <div class="band b2" data-a="0.18" data-b="0.33">
+        <div class="h">Seit 1990 ein Familienbetrieb. Heute in zweiter Generation.</div>
+      </div>
+      <div class="band b3" data-a="0.38" data-b="0.52">
+        <div class="h" id="punchline">700 m² Werkstatt. Neun Leute. <em class="emword">Ein Handwerk.</em></div>
+      </div>
+      <div class="band b4" data-a="0.56" data-b="0.70" data-spread="0.42">
+        <div class="h" id="scatterline">Beratung, Planung, Produktion und Montage. Alles aus einer Hand.</div>
+      </div>
+      <div class="band b5" data-a="0.76" data-b="1" data-ramp="0.05">
+        <div class="h" id="settleline">Handwerk, das überzeugt.</div>
+        <p class="sub">Maßmöbel, Türen, Fenster und Stiegen. Geplant und gebaut in Eichgraben.</p>
+        <div class="cta-row">
+          <a class="btn" href="#kontakt">Projekt anfragen</a>
+          <a class="btn btn-secondary" href="#leistungen">Leistungen ansehen</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="static-hero">
+      <p class="kicker mono">Tischlerei Hicker · Eichgraben</p>
+      <p class="h">Handwerk, das überzeugt.</p>
+      <p class="sub">Tischlerei Hicker, Familienbetrieb in Eichgraben seit 1990. Maßmöbel, Türen, Fenster und mehr.</p>
+      <div class="cta-row">
+        <a class="btn" href="#kontakt">Projekt anfragen</a>
+        <a class="btn btn-secondary" href="#leistungen">Leistungen</a>
+      </div>
+    </div>
+
+    <svg class="ring" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+    </svg>
+    <div class="cue" id="cue" aria-hidden="true">
+      <span>Scrollen</span>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 8l8 8 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <span class="ki-tag">KI-generiert</span>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+<h1 class="sr-only">Tischlerei Hicker in Eichgraben: Handwerk, das überzeugt. Maßmöbel, Türen, Fenster und Stiegen seit 1990.</h1>
+
+<section id="leistungen" class="reveal">
+  <div class="wrap">
+    <p class="sec-kicker mono part">Leistungen</p>
+    <h2 class="part">Was wir bauen.</h2>
+    <p class="lede part">Vom einzelnen Möbelstück bis zum kompletten Ausbau. Innen wie außen.</p>
+    <div class="svc-grid">
+      <div class="card svc-main part">
+        <div class="img"><img src="assets/leistung-kueche.jpg" alt="Maßgefertigte Einbauküche aus Eiche im warmen Morgenlicht (KI-generiertes Bild)" loading="lazy"><span class="ki-tag">KI-generiert</span></div>
+        <div class="txt">
+          <p class="tag mono">Innenbereich</p>
+          <h3>Maßmöbel und Innenausbau</h3>
+          <ul class="svc-list two-col">
+            <li>Maßmöbel und Küchen</li>
+            <li>Türen, auch Brandschutz</li>
+            <li>Fenster</li>
+            <li>Bodenbeläge</li>
+            <li>Treppen und Stiegen</li>
+            <li>Geschäftseinrichtung</li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc-side">
+        <div class="card part">
+          <div class="img"><img src="assets/leistung-stiege.jpg" alt="Massivholzstiege aus Eiche (KI-generiertes Bild)" loading="lazy"><span class="ki-tag">KI-generiert</span></div>
+        </div>
+        <div class="card part">
+          <div class="img" style="height:170px"><img src="assets/leistung-terrasse.jpg" alt="Holzterrasse mit Carport im Abendlicht, Wienerwald im Hintergrund (KI-generiertes Bild)" loading="lazy"><span class="ki-tag">KI-generiert</span></div>
+          <div class="txt">
+            <p class="tag mono">Außenbereich</p>
+            <h3>Draußen gebaut</h3>
+            <ul class="svc-list">
+              <li>Terrassen</li>
+              <li>Carports und Zäune</li>
+              <li>Außenstiegen</li>
+              <li>Spielanlagen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 340 44" fill="none">
+    <path d="M10 34 C 90 10, 250 10, 330 34" stroke="currentColor" stroke-width="2"/>
+    <path d="M40 38 C 110 20, 230 20, 300 38" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
+    <path d="M75 41 C 130 29, 210 29, 265 41" stroke="currentColor" stroke-width="1.2" opacity=".45"/>
+  </svg>
+</div>
+
+<section id="ablauf" class="reveal">
+  <div class="wrap">
+    <p class="sec-kicker mono part">Ablauf</p>
+    <h2 class="part">Vier Schritte, ein Stück.</h2>
+    <p class="lede part">So kommt Ihr Projekt vom ersten Gespräch bis an seinen Platz.</p>
+    <div class="flow">
+      <div class="steps part">
+        <svg aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 10 400">
+          <path id="flowline" d="M5 0 V 400" vector-effect="non-scaling-stroke"/>
+          <circle id="flowdot" cx="5" cy="0" r="4"/>
+        </svg>
+        <div class="step">
+          <span class="n mono" aria-hidden="true">1</span>
+          <h3>Beratung</h3>
+          <p>Wir hören zu, bei Ihnen oder in der Werkstatt.</p>
+        </div>
+        <div class="step">
+          <span class="n mono" aria-hidden="true">2</span>
+          <h3>Planung</h3>
+          <p>Ihr Stück entsteht zuerst am Bildschirm, maßgenau.</p>
+        </div>
+        <div class="step">
+          <span class="n mono" aria-hidden="true">3</span>
+          <h3>Produktion</h3>
+          <p>Meisterhand und moderne Maschinen, auf 700 m².</p>
+        </div>
+        <div class="step">
+          <span class="n mono" aria-hidden="true">4</span>
+          <h3>Montage</h3>
+          <p>Wir bauen ein, räumen auf und übergeben fertig.</p>
+        </div>
+      </div>
+      <div class="card planner part">
+        <div class="img"><img src="assets/planung.jpg" alt="Wolfgang Hicker plant ein Möbelstück am Bildschirm" loading="lazy"></div>
+        <div class="txt">
+          <p class="tag mono">Möbelplaner</p>
+          <h3>Sehen, bevor es gebaut ist</h3>
+          <p>Mit unserem Möbelplaner planen wir Ihr Stück gemeinsam am Bildschirm.</p>
+          <a class="btn btn-secondary" href="moebelplaner.html">Zum Möbelplaner</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 340 44" fill="none">
+    <path d="M10 34 C 90 10, 250 10, 330 34" stroke="currentColor" stroke-width="2"/>
+    <path d="M40 38 C 110 20, 230 20, 300 38" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
+    <path d="M75 41 C 130 29, 210 29, 265 41" stroke="currentColor" stroke-width="1.2" opacity=".45"/>
+  </svg>
+</div>
+
+<section id="ueber" class="reveal">
+  <div class="wrap">
+    <p class="sec-kicker mono part">Über uns</p>
+    <h2 class="part">Jahresringe.</h2>
+    <p class="lede part">Ein Ring ist ein Jahr gewachsene Zeit. Bei uns sind es 35, und man sieht sie in jedem Stück.</p>
+    <div class="rings-grid">
+      <div class="rings-fig part" aria-hidden="true">
+        <svg viewBox="0 0 430 380">
+          <g transform="translate(215,190)">
+            <ellipse class="ring-d" rx="34" ry="29" transform="rotate(-4)"/>
+            <ellipse class="ring-d" rx="70" ry="60" transform="rotate(2)"/>
+            <ellipse class="ring-d" rx="108" ry="93" transform="rotate(-2)"/>
+            <ellipse class="ring-d" rx="147" ry="127" transform="rotate(3)"/>
+            <ellipse class="ring-d" rx="186" ry="160" transform="rotate(-1)"/>
+            <circle class="r-core" r="4.5"/>
+          </g>
+        </svg>
+      </div>
+      <ol class="milestones">
+        <li><span class="y">1990</span><p><img class="ms-avatar" src="assets/fritz-1990.jpg" alt="Fritz Hicker" loading="lazy">Fritz Hicker gründet die Tischlerei. Drei Mann, 120 m².</p></li>
+        <li><span class="y">1993</span><p>Die Werkstatt wächst auf 300 m².</p></li>
+        <li><span class="y">2005</span><p>Aus dem Betrieb wird die Tischlerei Hicker GmbH.</p></li>
+        <li><span class="y">2010</span><p><img class="ms-avatar" src="assets/wolfgang-2010.jpg" alt="Wolfgang Hicker" loading="lazy">Wolfgang Hicker übernimmt in zweiter Generation. Neue Maschinen, Photovoltaik am Dach.</p></li>
+        <li><span class="y">Heute</span><p>Neun Leute auf 700 m², mitten in Eichgraben.</p></li>
+      </ol>
+    </div>
+
+    <div class="card team-card part">
+      <div class="img"><img src="assets/team-gruppenfoto.jpg" alt="Das Team der Tischlerei Hicker in der Werkstatt" loading="lazy"></div>
+      <p class="caption mono">Das Team der Tischlerei Hicker, in der Werkstatt in Eichgraben.</p>
+    </div>
+    <div class="hist-photo">
+      <div class="card part">
+        <div class="img"><img src="assets/werkstatt-1990.jpg" alt="Luftaufnahme der Werkstatt in Eichgraben in den 90er Jahren" loading="lazy"></div>
+        <p class="caption mono">Die Werkstatt in Eichgraben, Anfang der 90er.</p>
+      </div>
+      <div class="card part">
+        <div class="img"><img src="assets/fraeser.jpg" alt="Fräsköpfe an der Werkzeugwand der Tischlerei" loading="lazy"></div>
+        <p class="caption mono">Werkzeugwand in der Produktion, heute.</p>
+      </div>
+    </div>
+
+    <div class="sand part" id="sand">
+      <h3>Der letzte Schliff</h3>
+      <p class="hint">Drücken und halten Sie die Fläche, bis das Öl eingezogen ist.</p>
+      <div class="sand-stage" id="sandStage" role="button" tabindex="0" aria-label="Drücken und halten, um die Holzfläche zu schleifen und die Zahlen der Tischlerei zu zeigen" style="--p:0">
+        <div class="sand-rough"></div>
+        <div class="sand-oil"></div>
+        <div class="sand-rings" aria-hidden="true">
+          <svg viewBox="0 0 600 300" fill="none" stroke="currentColor">
+            <g transform="translate(300,150)">
+              <ellipse rx="40" ry="24" stroke-width="1.6"/>
+              <ellipse rx="110" ry="62" stroke-width="1.4" transform="rotate(-2)"/>
+              <ellipse rx="190" ry="104" stroke-width="1.2" transform="rotate(1)"/>
+              <ellipse rx="280" ry="148" stroke-width="1" transform="rotate(-1)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="sand-shine"></div>
+        <div class="sand-label mono">Gedrückt halten</div>
+      </div>
+      <div class="counters">
+        <div class="counter" data-target="8327"><div class="v mono" data-suffix="">0</div><div class="l">fertiggestellte Projekte</div></div>
+        <div class="counter" data-target="67895"><div class="v mono" data-suffix=" m²">0</div><div class="l">verlegter Fußboden</div></div>
+        <div class="counter" data-target="7689"><div class="v mono" data-suffix="">0</div><div class="l">zufriedene Kunden</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 340 44" fill="none">
+    <path d="M10 34 C 90 10, 250 10, 330 34" stroke="currentColor" stroke-width="2"/>
+    <path d="M40 38 C 110 20, 230 20, 300 38" stroke="currentColor" stroke-width="1.6" opacity=".7"/>
+    <path d="M75 41 C 130 29, 210 29, 265 41" stroke="currentColor" stroke-width="1.2" opacity=".45"/>
+  </svg>
+</div>
+
+<section id="stimmen" class="reveal">
+  <div class="wrap" style="text-align:center">
+    <p class="sec-kicker mono part">Stimmen</p>
+    <h2 class="part" style="margin:0 auto">Was Kunden sagen.</h2>
+    <div class="gbadge part"><b>5,0</b> Sterne auf Google</div>
+    <div class="quotes" style="text-align:left">
+      <figure class="quote wide part">
+        <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+        <blockquote>„Bei mir musste durch einen Umbau einiges abgebaut und danach wieder aufgebaut und ergänzt werden. Unkomplizierte und schnelle Durchführung der Arbeiten, die stets sehr pünktlichen Mitarbeiter lieben Herausforderungen :) und auch bei unvorhergesehenen Problemen gibt es stets rasche Lösungen, Chef stets bestens erreichbar, sauber und gut gearbeitet, jederzeit und sofort wieder!“</blockquote>
+        <figcaption>Paul · Google-Rezension</figcaption>
+      </figure>
+      <figure class="quote part">
+        <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+        <blockquote>„Wir können diese Firma zu 100 Prozent empfehlen. Freundliche und professionelle Beratungen. Kostenvoranschlag sogar unterboten. Wir freuen uns schon auf die nächsten Projekte, denn wir wissen heute schon, dass das Ergebnis wieder top sein wird.“</blockquote>
+        <figcaption>Christian S. · Google-Rezension</figcaption>
+      </figure>
+      <figure class="quote part">
+        <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+        <blockquote>„Mit dieser Tischlerei waren wir sehr zufrieden: alles wurde auftragsgemäß prompt und zu unserer Zufriedenheit ausgeführt. Alle involvierten Personen waren sehr freundlich und verlässlich.“</blockquote>
+        <figcaption>Johannes Daxbacher · Google-Rezension</figcaption>
+      </figure>
+      <figure class="quote part">
+        <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+        <blockquote>„Großartiger, freundlicher, kompetenter Betrieb!!!!!“</blockquote>
+        <figcaption>Hannelore Monschein · Google-Rezension</figcaption>
+      </figure>
+      <figure class="quote part">
+        <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+        <blockquote>„Der Sen.Chef hilft nach wie vor in der Tischlerei aus. Die Arbeiten sind korrekt ausgeführt und werden termingerecht geliefert.“</blockquote>
+        <figcaption>Waltraud Freudenthaler · Google-Rezension</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="reveal">
+  <div class="wrap">
+    <p class="sec-kicker mono part">Fragen</p>
+    <h2 class="part">Gut zu wissen.</h2>
+    <div class="faq part" style="margin-top:36px">
+      <details>
+        <summary>Was kostet eine Maßanfertigung?</summary>
+        <p>Das hängt vom Stück ab. Nach dem ersten Gespräch bekommen Sie ein klares Angebot, kostenlos und unverbindlich.</p>
+      </details>
+      <details>
+        <summary>Wie lange dauert ein Projekt?</summary>
+        <p>Kleine Stücke ein paar Wochen, ein kompletter Ausbau länger. Wir nennen Ihnen vorab einen ehrlichen Termin und halten ihn.</p>
+      </details>
+      <details>
+        <summary>Arbeitet ihr auch außerhalb von Eichgraben?</summary>
+        <p>Ja. Wir sind im ganzen Wienerwald, in St. Pölten und in Wien unterwegs.</p>
+      </details>
+      <details>
+        <summary>Macht ihr auch kleine Aufträge?</summary>
+        <p>Ja. Auch eine einzelne Tür oder ein Regal ist bei uns richtig.</p>
+      </details>
+      <details>
+        <summary>Mit welchen Materialien arbeitet ihr?</summary>
+        <p>Vor allem mit Massivholz und hochwertigen Platten. Wo andere Gewerke gefragt sind, arbeiten wir mit spezialisierten Partnerbetrieben zusammen.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="reveal">
+  <div class="wrap">
+    <div class="kontakt-band part" aria-hidden="true">
+      <img src="assets/hero-ending.jpg" alt="" loading="lazy">
+      <p class="over">Ihr Stück wartet schon auf seinen ersten Ring.</p>
+      <span class="ki-tag" style="z-index:1">KI-generiert</span>
+    </div>
+    <div class="k-grid">
+      <div class="part">
+        <p class="sec-kicker mono">Kontakt</p>
+        <h2>Erzählen Sie uns von Ihrem Projekt.</h2>
+        <p class="lede" style="margin-bottom:34px">Schreiben Sie uns, was Sie bauen möchten. Sie bekommen eine ehrliche Einschätzung und ein klares Angebot.</p>
+        <form id="mailform" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="f-name">Ihr Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-mail">Ihre E-Mail</label>
+              <input id="f-mail" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Ihr Projekt</label>
+            <textarea id="f-msg" name="message" required placeholder="Zum Beispiel: eine Einbauküche, eine neue Haustür, eine Stiege ..."></textarea>
+          </div>
+          <p class="form-note">Der Knopf öffnet Ihr E-Mail-Programm mit fertiger Nachricht an tischlerei@tischlereihicker.at. Es wird nichts automatisch versendet.</p>
+          <button class="btn" type="submit">Anfrage per E-Mail senden</button>
+          <div class="form-ok" id="formOk">Ihr E-Mail-Programm sollte sich geöffnet haben. Falls nicht, schreiben Sie uns direkt an <a href="mailto:tischlerei@tischlereihicker.at">tischlerei@tischlereihicker.at</a>.</div>
+        </form>
+      </div>
+      <div class="k-card part">
+        <h3>Werkstatt und Büro</h3>
+        <div class="k-line">
+          <span class="lbl mono">Adresse</span>
+          Schießstättenstraße 1, 3032 Eichgraben
+        </div>
+        <div class="k-line">
+          <span class="lbl mono">Telefon</span>
+          <a class="big-tel" href="tel:+43277343347">+43 2773 43347</a>
+        </div>
+        <div class="k-line">
+          <span class="lbl mono">E-Mail</span>
+          <a href="mailto:tischlerei@tischlereihicker.at">tischlerei@tischlereihicker.at</a>
+        </div>
+        <div class="k-line">
+          <span class="lbl mono">Geschäftszeiten</span>
+          <table class="hours">
+            <tr><td>Montag bis Donnerstag</td><td>07:00 bis 16:00</td></tr>
+            <tr><td>Freitag</td><td>07:00 bis 12:00</td></tr>
+          </table>
+        </div>
+        <div class="k-line">
+          <span class="lbl mono">Vergabeportal</span>
+          <a href="ankoe.html">ANKÖ Führungsbestätigung</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="f-wrap">
+    <div>
+      <img class="logo-full" src="assets/logo-full.png" alt="Tischlerei Hicker GmbH" width="175" height="165" loading="lazy">
+      <p class="f-col" style="margin-top:14px">Schießstättenstraße 1, 3032 Eichgraben<br>Mo bis Do 7 bis 16 Uhr, Fr 7 bis 12 Uhr</p>
+    </div>
+    <div class="f-col">
+      <a href="#leistungen">Leistungen</a><br>
+      <a href="#ablauf">Ablauf</a><br>
+      <a href="#ueber">Über uns</a><br>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="f-col">
+      <a href="moebelplaner.html">Möbelplaner</a><br>
+      <a href="ankoe.html">ANKÖ Führungsbestätigung</a><br>
+      <a href="impressum.html">Impressum</a>
+    </div>
+    <div class="f-note">
+      <span>© 2026 Tischlerei Hicker GmbH, Eichgraben</span>
+      <span>Bildmaterial teilweise KI-generiert.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- Shared helpers ---------- */
+var clamp=function(v,lo,hi){return Math.min(hi,Math.max(lo,v))};
+var smoothstep=function(p,e0,e1){var t=clamp((p-e0)/(e1-e0),0,1);return t*t*(3-2*t)};
+function rng(seed){var s=seed>>>0;return function(){s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+var reduceMQ=matchMedia('(prefers-reduced-motion: reduce)');
+
+/* ---------- Text splitting (once, seeded) ---------- */
+function splitWords(el,spread,emClass){
+  var srText=el.textContent;
+  var nodes=[];
+  el.childNodes.forEach&&Array.prototype.slice.call(el.childNodes).forEach(function(n){nodes.push(n)});
+  var words=[];
+  nodes.forEach(function(n){
+    if(n.nodeType===3){n.textContent.split(/\s+/).forEach(function(w){if(w)words.push({t:w,em:false})})}
+    else if(n.nodeType===1){n.textContent.split(/\s+/).forEach(function(w){if(w)words.push({t:w,em:true})})}
+  });
+  el.textContent='';
+  var sr=document.createElement('span');sr.className='sr-only';sr.textContent=srText;el.appendChild(sr);
+  var vis=document.createElement('span');vis.setAttribute('aria-hidden','true');
+  var r=rng(42);
+  words.forEach(function(w,i){
+    var s=document.createElement('span');
+    s.className='w'+(w.em&&emClass?' '+emClass:'');
+    s.textContent=w.t;
+    s.style.setProperty('--th',(i/words.length*(spread||0.5)+r()*0.05).toFixed(3));
+    vis.appendChild(s);
+    if(i<words.length-1)vis.appendChild(document.createTextNode(' '));
+  });
+  el.appendChild(vis);
+}
+function splitChars(el,spread){
+  var srText=el.textContent;
+  el.textContent='';
+  var sr=document.createElement('span');sr.className='sr-only';sr.textContent=srText;el.appendChild(sr);
+  var vis=document.createElement('span');vis.setAttribute('aria-hidden','true');
+  var r=rng(7);
+  var chars=srText.split('');var total=chars.length;var idx=0;
+  var word=document.createElement('span');word.className='w';
+  chars.forEach(function(ch){
+    if(ch===' '){vis.appendChild(word);vis.appendChild(document.createTextNode(' '));word=document.createElement('span');word.className='w';idx++;return}
+    var c=document.createElement('span');c.className='c';c.textContent=ch;
+    c.style.setProperty('--th',(r()*(spread||0.5)).toFixed(3));
+    c.style.setProperty('--jx',((r()*2-1)*34).toFixed(1)+'px');
+    c.style.setProperty('--jy',((r()*2-1)*26).toFixed(1)+'px');
+    c.style.setProperty('--jr',((r()*2-1)*14).toFixed(1)+'deg');
+    word.appendChild(c);idx++;
+  });
+  vis.appendChild(word);
+  el.appendChild(vis);
+}
+splitWords(document.getElementById('punchline'),0.42,'em');
+splitChars(document.getElementById('scatterline'),(parseFloat(document.querySelector('.b4').dataset.spread)||0.42));
+splitWords(document.getElementById('settleline'),0.4);
+
+/* ---------- Hero elements and band model ---------- */
+var VIDEO_URL='assets/hero-scrub.mp4';
+var VIDEO_BYTES=7785012;
+var hero=document.getElementById('top');
+var stage=document.getElementById('stage');
+var video=document.getElementById('heroVid');
+var posterLayer=document.getElementById('poster');
+var ringEl=document.querySelector('.ring circle');
+var bands=Array.prototype.slice.call(document.querySelectorAll('.band')).map(function(el){
+  return {el:el,a:parseFloat(el.dataset.a),b:parseFloat(el.dataset.b),
+          ramp:el.dataset.ramp?parseFloat(el.dataset.ramp):null,op:-1,k:-1,sub:-1,btn:-1};
+});
+var b5=bands[bands.length-1];
+
+function heroProgress(){
+  var range=hero.offsetHeight-innerHeight;
+  return range>0?clamp(scrollY/range,0,1):0;
+}
+
+/* ---------- Caption drive (delta-gated) ---------- */
+var loadK=0,loadK0=0;
+function updateCaptions(p){
+  for(var i=0;i<bands.length;i++){
+    var bd=bands[i];
+    var f=Math.min(0.02,(bd.b-bd.a)/3);
+    var op=(i===0?1:smoothstep(p,bd.a,bd.a+f))*(i===bands.length-1?1:(1-smoothstep(p,bd.b-f,bd.b)));
+    if(i===0&&p>bd.b)op=1-smoothstep(p,bd.b-f,bd.b);
+    if(i===bands.length-1)op=smoothstep(p,bd.a,bd.a+f);
+    var ramp=bd.ramp||Math.min(0.025,(bd.b-bd.a)*0.35);
+    var k=clamp((p-bd.a)/ramp,0,1);
+    if(i===0)k=Math.max(k,loadK);
+    if(op<0.015)op=0;
+    if(Math.abs(op-bd.op)>0.008||(op===0&&bd.op!==0)){bd.op=op;bd.el.style.opacity=op.toFixed(3)}
+    if(Math.abs(k-bd.k)>0.008){bd.k=k;bd.el.style.setProperty('--k',k.toFixed(3))}
+    if(i===bands.length-1){
+      var ksub=clamp((k-0.66)*4,0,1),kb=clamp((k-0.78)*5,0,1);
+      if(Math.abs(ksub-bd.sub)>0.008){bd.sub=ksub;bd.el.style.setProperty('--ksub',ksub.toFixed(3))}
+      if(Math.abs(kb-bd.btn)>0.008){bd.btn=kb;bd.el.style.setProperty('--kb',kb.toFixed(3));bd.el.classList.toggle('live',kb>0.6)}
+    }
+  }
+  var cueOn=p<0.03&&scrubOn;
+  if(cueOn!==lastCue){lastCue=cueOn;stage.classList.toggle('cue-on',cueOn);stage.classList.toggle('cue-off',!cueOn)}
+}
+var lastCue=null;
+
+/* ---------- Seek gate (deadlock-safe) ---------- */
+var seekBusy=false,pendingTime=null;
+function requestSeek(t){
+  if(!video.duration)return;
+  if(seekBusy){pendingTime=t;return}
+  seekBusy=true;
+  video.currentTime=t;
+}
+video.addEventListener('seeked',function(){
+  seekBusy=false;
+  if(pendingTime!==null){var t=pendingTime;pendingTime=null;requestSeek(t)}
+});
+video.addEventListener('error',function(){
+  seekBusy=false;pendingTime=null;
+  failVideo();
+});
+
+/* ---------- rAF lerp loop (rests when converged) ---------- */
+var target=0,shown=0,rafId=null,lastTick=0,heroOnScreen=true;
+function tick(now){
+  var dt=Math.min(100,now-(lastTick||now));
+  lastTick=now;
+  var k=0.16;
+  shown+=(target-shown)*(1-Math.pow(1-k,dt/16.667));
+  if(Math.abs(target-shown)<0.0005){shown=target;rafId=null;lastTick=0}
+  else{rafId=requestAnimationFrame(tick)}
+  if(video.duration)requestSeek(shown*video.duration);
+  updateCaptions(shown);
+}
+function onScroll(){
+  target=heroProgress();
+  if(rafId===null&&heroOnScreen)rafId=requestAnimationFrame(tick);
+}
+new IntersectionObserver(function(es){
+  heroOnScreen=es[0].isIntersecting;
+  if(heroOnScreen&&scrubOn)onScroll();
+},{threshold:0}).observe(hero);
+
+/* ---------- Blob loader (streamed, poster first) ---------- */
+var heroInit=false,blobStarted=false;
+function initHeroOnce(){
+  if(heroInit)return;heroInit=true;
+  posterLayer.style.backgroundImage="url('assets/hero-poster.jpg')";
+  var pi=new Image();
+  pi.onload=startBlobFetch;pi.onerror=startBlobFetch;
+  pi.src='assets/hero-poster.jpg';
+  setTimeout(startBlobFetch,4000);
+}
+function startBlobFetch(){
+  if(blobStarted)return;blobStarted=true;
+  loadHeroBlob().catch(failVideo);
+}
+function loadHeroBlob(){
+  var ctrl=new AbortController();
+  var watchdog=setTimeout(function(){ctrl.abort()},20000);
+  return fetch(VIDEO_URL,{priority:'low',signal:ctrl.signal}).then(function(res){
+    if(!res.ok)throw new Error('http '+res.status);
+    var total=Number(res.headers.get('Content-Length'))||VIDEO_BYTES;
+    var reader=res.body.getReader();
+    var chunks=[],got=0,lastRing=0;
+    function pump(){
+      return reader.read().then(function(r){
+        if(r.done)return;
+        clearTimeout(watchdog);
+        watchdog=setTimeout(function(){ctrl.abort()},20000);
+        chunks.push(r.value);got+=r.value.length;
+        var frac=Math.min(1,got/total);
+        var now=performance.now();
+        if(now-lastRing>100||frac===1){lastRing=now;ringEl.style.setProperty('--ld',Math.round(126*(1-frac)))}
+        return pump();
+      });
+    }
+    return pump().then(function(){
+      clearTimeout(watchdog);
+      ringEl.style.setProperty('--ld',0);
+      video.src=URL.createObjectURL(new Blob(chunks,{type:'video/mp4'}));
+      video.load();
+      video.addEventListener('canplay',function(){
+        requestSeek(heroProgress()*video.duration);
+        stage.classList.add('video-ready');
+      },{once:true});
+    });
+  });
+}
+function failVideo(){
+  var ring=document.querySelector('.ring');
+  if(ring)ring.remove();
+  stage.classList.add('video-failed');
+}
+
+/* ---------- Band-1 load ramp (one-time) ---------- */
+var loadRamped=false;
+function rampBand1(){
+  if(loadRamped)return;loadRamped=true;
+  loadK0=performance.now();
+  (function step(now){
+    loadK=clamp((now-loadK0)/1400,0,1);
+    loadK=loadK*loadK*(3-2*loadK);
+    updateCaptions(shown);
+    if(loadK<1)requestAnimationFrame(step);
+  })(loadK0);
+}
+
+/* ---------- The five gates, live (CSS strings identical) ---------- */
+var GATES=[
+  '(max-width: 720px)',
+  '(orientation: portrait) and (max-width: 1024px)',
+  '(orientation: portrait) and (pointer: coarse)',
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+  '(prefers-reduced-motion: reduce)'
+];
+var scrubOn=false;
+function enableScrub(){
+  if(scrubOn)return;scrubOn=true;
+  initHeroOnce();
+  addEventListener('scroll',onScroll,{passive:true});
+  bands.forEach(function(b){b.op=-1;b.k=-1;b.sub=-1;b.btn=-1});
+  unpinFinalStates();
+  rampBand1();
+  target=heroProgress();shown=target;
+  updateCaptions(shown);
+  onScroll();
+}
+function disableScrub(){
+  if(!scrubOn)return;scrubOn=false;
+  removeEventListener('scroll',onScroll);
+  if(rafId!==null){cancelAnimationFrame(rafId);rafId=null}
+}
+function applyHeroMode(){
+  if(GATES.some(function(q){return matchMedia(q).matches})){disableScrub();if(reduceMQ.matches)pinToFinalStates()}
+  else enableScrub();
+}
+var MQLS=GATES.map(function(q){return matchMedia(q)});
+MQLS.forEach(function(m){m.addEventListener('change',applyHeroMode)});
+
+/* ---------- Scroll-driven drawings (flow line, year rings) ---------- */
+var flowline=document.getElementById('flowline');
+var flowdot=document.getElementById('flowdot');
+var stepsEl=document.querySelector('.steps');
+var ringEls=Array.prototype.slice.call(document.querySelectorAll('.rings-fig .ring-d'));
+var ringsFig=document.querySelector('.rings-fig svg');
+var milestones=Array.prototype.slice.call(document.querySelectorAll('.milestones li'));
+ringEls.forEach(function(e){
+  var len=e.getTotalLength();
+  e.style.strokeDasharray=len;
+  e.style.strokeDashoffset=len;
+  e.dataset.len=len;
+});
+if(flowline){
+  var fl=flowline.getTotalLength();
+  flowline.style.strokeDasharray=fl;flowline.style.strokeDashoffset=fl;flowline.dataset.len=fl;
+}
+var drawsPinned=false,lastFlowP=-1,lastRingP=-1;
+function sectionProgress(el,lead){
+  var r=el.getBoundingClientRect();
+  return clamp((innerHeight*(lead||0.86)-r.top)/(r.height*0.9),0,1);
+}
+function updateDraws(){
+  if(drawsPinned)return;
+  if(stepsEl&&flowline){
+    var p=sectionProgress(stepsEl);
+    if(Math.abs(p-lastFlowP)>0.01){
+      lastFlowP=p;
+      flowline.style.strokeDashoffset=(flowline.dataset.len*(1-p)).toFixed(1);
+      flowdot.setAttribute('cy',(400*p).toFixed(1));
+    }
+  }
+  if(ringsFig){
+    var q=sectionProgress(ringsFig,0.92);
+    if(Math.abs(q-lastRingP)>0.01){
+      lastRingP=q;
+      ringEls.forEach(function(e,i){
+        var s=clamp((q-i*0.13)/0.35,0,1);
+        e.style.strokeDashoffset=(e.dataset.len*(1-s)).toFixed(1);
+      });
+      milestones.forEach(function(li,i){
+        li.classList.toggle('lit',q>0.14+i*0.13);
+      });
+    }
+  }
+}
+addEventListener('scroll',function(){if(!reduceMQ.matches)updateDraws()},{passive:true});
+function pinToFinalStates(){
+  drawsPinned=true;
+  if(flowline){flowline.style.strokeDashoffset=0;flowdot.setAttribute('cy',400)}
+  ringEls.forEach(function(e){e.style.strokeDashoffset=0});
+  milestones.forEach(function(li){li.classList.add('lit')});
+  counters.forEach(function(c){finishCounter(c)});
+  sandP=1;applySand();sandDone=true;
+}
+function unpinFinalStates(){
+  drawsPinned=false;lastFlowP=-1;lastRingP=-1;
+  updateDraws();
+}
+reduceMQ.addEventListener('change',function(e){
+  if(e.matches)pinToFinalStates();
+  else applyHeroMode();
+});
+
+/* ---------- Reveal choreography ---------- */
+var revealIO=new IntersectionObserver(function(es){
+  es.forEach(function(en){
+    if(en.isIntersecting){
+      en.target.classList.add('in');
+      revealIO.unobserve(en.target);
+      setTimeout(function(){en.target.classList.add('settled')},1600);
+    }
+  });
+},{threshold:0.16});
+document.querySelectorAll('.reveal').forEach(function(s){revealIO.observe(s)});
+var divIO=new IntersectionObserver(function(es){
+  es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');divIO.unobserve(en.target)}});
+},{threshold:0.6});
+document.querySelectorAll('.divider').forEach(function(d){divIO.observe(d)});
+var animIO=new IntersectionObserver(function(es){
+  es.forEach(function(en){en.target.classList.toggle('anim',en.isIntersecting)});
+},{threshold:0.1});
+document.querySelectorAll('#leistungen,#stimmen').forEach(function(s){animIO.observe(s)});
+
+/* ---------- Counters ---------- */
+var counters=Array.prototype.slice.call(document.querySelectorAll('.counter'));
+function fmt(n){return n.toLocaleString('de-AT')}
+function finishCounter(c){
+  if(c.dataset.done)return;
+  c.dataset.done='1';c.classList.add('on');
+  var v=c.querySelector('.v');
+  v.textContent=fmt(parseInt(c.dataset.target,10))+(v.dataset.suffix||'');
+}
+function runCounter(c){
+  if(c.dataset.done)return;
+  c.dataset.done='1';c.classList.add('on');
+  var v=c.querySelector('.v'),targetN=parseInt(c.dataset.target,10),t0=performance.now(),last='';
+  (function step(now){
+    var t=clamp((now-t0)/1600,0,1);
+    var e=1-Math.pow(1-t,3);
+    var txt=fmt(Math.round(targetN*e))+(v.dataset.suffix||'');
+    if(txt!==last){last=txt;v.textContent=txt}
+    if(t<1)requestAnimationFrame(step);
+  })(t0);
+}
+
+/* ---------- Der letzte Schliff (press and hold) ---------- */
+var sandStage=document.getElementById('sandStage');
+var sandP=0,sandHeld=false,sandRaf=null,sandLast=0,sandDone=false,sandShown=-1;
+function applySand(){
+  if(Math.abs(sandP-sandShown)>0.005){
+    sandShown=sandP;
+    sandStage.style.setProperty('--p',sandP.toFixed(3));
+  }
+  counters.forEach(function(c,i){
+    var th=0.45+i*0.2;
+    if(sandP>=th)runCounter(c);
+  });
+}
+function sandLoop(now){
+  var dt=Math.min(80,now-(sandLast||now));sandLast=now;
+  if(sandHeld)sandP=clamp(sandP+dt/1900,0,1);
+  else if(!sandDone)sandP=clamp(sandP-dt/2600,0,1);
+  applySand();
+  if(sandP>=1)sandDone=true;
+  if((sandHeld&&sandP<1)||(!sandHeld&&!sandDone&&sandP>0)){sandRaf=requestAnimationFrame(sandLoop)}
+  else{sandRaf=null;sandLast=0}
+}
+function sandStart(e){
+  if(reduceMQ.matches)return;
+  if(e.type==='keydown'){if(e.key!==' '&&e.key!=='Enter')return;e.preventDefault()}
+  if(e.type==='pointerdown')e.preventDefault();
+  sandHeld=true;
+  if(sandRaf===null)sandRaf=requestAnimationFrame(sandLoop);
+}
+function sandEnd(){
+  sandHeld=false;
+  if(sandRaf===null&&!sandDone&&sandP>0)sandRaf=requestAnimationFrame(sandLoop);
+}
+sandStage.addEventListener('pointerdown',sandStart);
+addEventListener('pointerup',sandEnd);
+addEventListener('pointercancel',sandEnd);
+sandStage.addEventListener('keydown',sandStart);
+sandStage.addEventListener('keyup',sandEnd);
+sandStage.addEventListener('blur',sandEnd);
+if(reduceMQ.matches){sandP=1;sandDone=true;applySand()}
+
+/* ---------- Nav state ---------- */
+var nav=document.getElementById('nav'),navOn=null;
+function navScroll(){
+  var s=scrollY>32;
+  if(s!==navOn){navOn=s;nav.classList.toggle('scrolled',s)}
+}
+addEventListener('scroll',navScroll,{passive:true});
+navScroll();
+
+/* ---------- Form (mailto, honest) ---------- */
+document.getElementById('mailform').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('f-name').value.trim();
+  var m=document.getElementById('f-mail').value.trim();
+  var t=document.getElementById('f-msg').value.trim();
+  var body='Guten Tag,%0D%0A%0D%0A'+encodeURIComponent(t)+'%0D%0A%0D%0A'+encodeURIComponent(n)+'%0D%0A'+encodeURIComponent(m);
+  location.href='mailto:tischlerei@tischlereihicker.at?subject='+encodeURIComponent('Projektanfrage von '+n)+'&body='+body;
+  document.getElementById('formOk').classList.add('show');
+});
+
+/* ---------- Tab visibility ---------- */
+document.addEventListener('visibilitychange',function(){
+  document.body.classList.toggle('paused',document.hidden);
+});
+
+/* ---------- Boot ---------- */
+applyHeroMode();
+if(!reduceMQ.matches)updateDraws();
+else pinToFinalStates();
+})();
+</script>
+</body>
+</html>

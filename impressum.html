@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Impressum und Datenschutz · Tischlerei Hicker</title>
+<meta name="description" content="Impressum und Datenschutzerklärung der Tischlerei Hicker GmbH, Eichgraben.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#191310">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono&family=Instrument+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --canvas:#191310;--panel:#241b15;
+  --accent:#d99a4e;--accent-hover:#e8b066;
+  --text-primary:#f4ecdf;--text-secondary:#cbbba6;--text-dim:#a4947e;
+  --line:rgba(212,178,134,.15);--line-strong:rgba(217,154,78,.55);
+  --ease:cubic-bezier(.22,.61,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden;overflow-x:clip}
+body{background:var(--canvas);color:var(--text-primary);font-family:"Instrument Sans",system-ui,sans-serif;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-decoration:none;overflow-wrap:anywhere}
+a:hover{color:var(--accent-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--accent);color:#1c1206;padding:10px 16px;border-radius:8px;font-weight:500;transition:top .25s var(--ease)}
+.skip:focus{top:12px;color:#1c1206}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:28px;padding:12px clamp(18px,4vw,44px);background:rgba(25,19,16,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text-primary)}
+.brand:hover{color:var(--text-primary)}
+.brand .logo-img{height:46px;width:auto;flex:none}
+.brand-name{font-family:"Fraunces",serif;font-size:19px;white-space:nowrap}
+.brand-name b{font-weight:600}
+.nav-links{display:flex;gap:26px;margin-left:auto;align-items:baseline}
+.nav-links a{color:var(--text-secondary);font-size:15px;transition:color .3s var(--ease)}
+.nav-links a:hover{color:var(--text-primary)}
+.nav .btn{margin-left:8px}
+@media (max-width:900px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+.btn{display:inline-block;background:var(--accent);color:#1c1206;font-weight:500;font-size:15.5px;padding:12px 24px;border-radius:10px;cursor:pointer;transition:background .3s var(--ease),transform .3s var(--ease);border:1px solid transparent}
+.btn:hover{background:var(--accent-hover);color:#1c1206;transform:translateY(-1px)}
+@media (pointer:coarse){.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
+.page-head{padding:clamp(54px,8vw,90px) clamp(20px,5vw,60px) 0}
+.wrap{max-width:860px;margin:0 auto}
+.sec-kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.page-head h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(28px,4vw,46px);line-height:1.14}
+.note{color:var(--text-dim);font-size:13.5px;margin-top:14px}
+.content{padding:clamp(30px,5vw,50px) clamp(20px,5vw,60px) clamp(70px,9vw,120px)}
+.legal h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(24px,3vw,34px);line-height:1.2;margin:54px 0 16px;padding-top:34px;border-top:1px solid var(--line)}
+.legal h1:first-child{margin-top:0;border-top:0;padding-top:0}
+.legal h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(20px,2.2vw,26px);line-height:1.25;margin:40px 0 12px}
+.legal h3{font-size:17.5px;font-weight:600;margin:26px 0 8px;color:var(--text-primary)}
+.legal p{color:var(--text-secondary);margin:0 0 14px}
+.legal ul,.legal ol{color:var(--text-secondary);margin:0 0 14px 22px}
+.legal li{margin-bottom:6px}
+.legal strong{color:var(--text-primary)}
+.legal em{color:var(--text-secondary)}
+.legal table{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:14.5px}
+.legal td,.legal th{border:1px solid var(--line);padding:8px 10px;color:var(--text-secondary);text-align:left;vertical-align:top}
+.legal img{margin:18px auto;border-radius:10px;border:1px solid var(--line-strong)}
+footer{border-top:1px solid var(--line);padding:40px clamp(20px,5vw,60px) 36px}
+.f-wrap{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;font-size:13.5px;color:var(--text-dim)}
+.f-wrap a{color:var(--text-secondary)}
+.f-wrap a:hover{color:var(--accent-hover)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<nav class="nav" aria-label="Hauptnavigation">
+  <a class="brand" href="index.html" aria-label="Tischlerei Hicker, zur Startseite">
+    <img class="logo-img" src="assets/logo-full.png" alt="" width="49" height="46">
+    <span class="brand-name">Tischlerei <b>Hicker</b></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#leistungen">Leistungen</a>
+    <a href="index.html#ablauf">Ablauf</a>
+    <a href="index.html#ueber">Über uns</a>
+    <a href="index.html#stimmen">Stimmen</a>
+  </div>
+  <a class="btn" href="index.html#kontakt">Projekt anfragen</a>
+</nav>
+
+<main id="main" tabindex="-1">
+  <div class="page-head">
+    <div class="wrap">
+      <p class="sec-kicker mono">Rechtliches</p>
+      <h1>Impressum und Datenschutz</h1>
+      <p class="note">Die folgenden Texte sind wortgleich von der bestehenden Website der Tischlerei Hicker übernommen.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="wrap legal">
+
+<div>
+<h1>Impressum / Datenschutzerklärung</h1>
+<div>
+<div>
+<h1 style="text-align: left; padding-left: 40px;">Impressum</h1>
+<p style="text-align: left; padding-left: 40px;">Angaben gemäß Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
+<p style="text-align: left; padding-left: 40px;">Tischlerei Hicker GmbH<br>Schießstättenstr. 1, <br>3032 Eichgraben, <br>Österreich</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Unternehmensgegenstand:</strong> Tischler, Handelsgewerbe, eingeschränkt auf den Einzelhandel<br><strong>UID-Nummer:</strong> ATU61949422<br><strong>GLN:</strong> 9110016838199<br><strong>GISA:</strong> 13977511, 13977504<br><strong>Firmenbuchnummer:</strong> FN 266879 w<br><strong>Firmenbuchgericht:</strong> Landesgericht St. Pölten<br><strong>Firmensitz:</strong> 3032 Eichgraben</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Tel.:</strong> +43 2773 43347<br><br><strong>E-Mail:</strong> &#116;&#x69;&#115;&#x63;&#104;&#x6C;&#101;&#x72;&#101;&#x69;&#64;&#x74;&#105;&#x73;&#99;&#x68;&#108;&#x65;&#114;&#x65;&#105;&#x68;&#105;&#x63;&#107;&#x65;&#114;&#x2E;&#97;&#x74;;office@tischlereihicker.at</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Mitglied bei:</strong> WKO, Landesinnung, etc.<br><strong>Berufsrecht:</strong> Gewerbeordnung: www.ris.bka.gv.at</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Aufsichtsbehörde/Gewerbebehörde:</strong> Bezirkshauptmannschaft Sankt Pölten<br><strong>Berufsbezeichnung:</strong> Tischler, Handelsgewerbe, eingeschränkt auf den Einzelhandel<br><strong>Verleihungsstaat:</strong> Österreich</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Geschäftsführer</strong> <br>Wolfgang Hicker</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Beteiligungsverhältnisse</strong> <br>Gesellschafter Herr Hicker Friedrich Privatperson Anteil: 40,00%<br>Gesellschafter Herr Hicker Wolfgang Privatperson Anteil: 60,00%</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Kontaktdaten des Verantwortlichen für Datenschutz</strong> <br>Sollten Sie Fragen zum Datenschutz haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw. Stelle:<br>Tischlerei Hicker GmbH<br>Schießstättenstr. 1<br>3032 Eichgraben<br>E-Mail-Adresse: &#116;&#x69;&#115;&#x63;&#104;&#x6C;&#101;&#x72;&#101;&#x69;&#64;&#x74;&#105;&#x73;&#99;&#x68;&#108;&#x65;&#114;&#x65;&#105;&#x68;&#105;&#x63;&#107;&#x65;&#114;&#x2E;&#97;&#x74;;office@tischlereihicker.at<br>Telefon: +43 2773 43347<br>Impressum: <a href="https://www.tischlereihicker.at/impressum" target="_self" rel="noopener">https://www.tischlereihicker.at/impressum</a></p>
+<h2 style="text-align: left; padding-left: 40px;">EU-Streitschlichtung</h2>
+<p style="text-align: left; padding-left: 40px;">Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.<br>Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE" target="_blank" rel="follow noopener">https://ec.europa.eu/consumers/odr/main/index.cfm?event&#61;main.home2.show&amp;lng&#61;DE</a> zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.</p>
+<p style="text-align: left; padding-left: 40px;">Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+<h2 style="text-align: left; padding-left: 40px;">Haftung für Inhalte dieser Website</h2>
+<p style="text-align: left; padding-left: 40px;">Wir entwickeln die Inhalte dieser Website ständig weiter und bemühen uns korrekte und aktuelle Informationen bereitzustellen. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Website übernehmen, speziell für jene, die seitens Dritter bereitgestellt wurden. Als Diensteanbieter sind wir nicht verpflichtet, die von Ihnen übermittelten oder gespeicherten Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+<p style="text-align: left; padding-left: 40px;">Unsere Verpflichtungen zur Entfernung von Informationen oder zur Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen aufgrund von gerichtlichen oder behördlichen Anordnungen bleiben auch im Falle unserer Nichtverantwortlichkeit davon unberührt.</p>
+<p style="text-align: left; padding-left: 40px;">Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitte wir Sie uns umgehend zu kontaktieren, damit wir die rechtswidrigen Inhalte entfernen können. Sie finden die Kontaktdaten im Impressum.</p>
+<h2 style="text-align: left; padding-left: 40px;">Haftung für Links auf dieser Website</h2>
+<p style="text-align: left; padding-left: 40px;">Unsere Website enthält Links zu anderen Websites für deren Inhalt wir nicht verantwortlich sind. Haftung für verlinkte Websites besteht für uns nicht, da wir keine Kenntnis rechtswidriger Tätigkeiten hatten und haben, uns solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen würden, wenn uns Rechtswidrigkeiten bekannt werden.</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitte wir Sie uns zu kontaktieren. Sie finden die Kontaktdaten im Impressum.</p>
+<h2 style="text-align: left; padding-left: 40px;">Urheberrechtshinweis</h2>
+<p style="text-align: left; padding-left: 40px;">Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Bitte fragen Sie uns bevor Sie die Inhalte dieser Website verbreiten, vervielfältigen oder verwerten wie zum Beispiel auf anderen Websites erneut veröffentlichen. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.</p>
+<p style="text-align: left; padding-left: 40px;">Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.</p>
+<p style="text-align: left; padding-left: 40px;">Alle Texte sind urheberrechtlich geschützt.</p>
+<p style="text-align: left; padding-left: 40px;">Quelle: Erstellt mit dem <a title="Impressum Generator von AdSimple für Österreich" href="https://www.adsimple.at/impressum-generator/">Impressum Generator</a> von AdSimple</p>
+<h1 style="text-align: left; padding-left: 40px;">Datenschutzerklärung</h1>
+<p style="padding-left: 160px;"><strong>Anwendung EGGER inside Möbelplaner (Möbelplaner und Möbelplaner PRO)</strong></p>
+<p style="padding-left: 160px;"><br>Der Möbelplaner ist eine Anwendung, mit der Sie ein Möbelstück nach Ihren individuellen Bedürfnissen <br>erstellen können. Diese Anwendung wird von einem externen Dienstleister, der EGGER Holzwerkstoffe Brilon <br>GmbH&amp;Co KG, zur Verfügung gestellt. Wenn Sie im Möbelplaner eine Angebotsanfrage vornehmen möchten, <br>ist die Angabe Ihrer persönlichen Daten für die Bearbeitung und die Abwicklung der Angebotsanfrage <br>erforderlich. Entsprechende Pflichtfelder sind für die Erstellung eines Angebots notwendig und gekennzeichnet. <br>Ihre Daten werden für die Dauer der Bearbeitung Ihres Angebots gespeichert, sofern keine <br>Aufbewahrungsfristen diesem entgegenstehen. Rechtsgrundlage hierfür ist die Vertragsanbahnung gem. Art. <br>6 Abs. 1 lit. b DSGVO.</p>
+<p style="padding-left: 160px;"><br>Damit Sie die Möglichkeit haben, Ihr geplantes Möbelstück jederzeit zu speichern und zu einem späteren <br>Zeitpunkt weiter zu bearbeiten, ohne eine Angebotsanfrage direkt abzuschicken, benötigen wir für die <br>Speicherung die Angabe Ihrer persönlichen Daten notwendig (Vor- und Nachname, Firma/Adresszusatz,<br>Strasse, Nr., PLZ, Ort, Kundenkontokennwort, E-Mail Adresse, Tel.-Nr.). Alternativ kann während des <br>Vorganges ein passwortgeschütztes Kundenkonto eingerichtet werden. Im Rahmen der Registrierung werden <br>zusätzlich erhoben: IP-Adresse, Endgerättyp, Grafikauflösung, Datum und Uhrzeit der Registrierung und die <br>Verweildauer. Rechtsgrundlage ist dann Ihre Einwilligung gem. Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung <br>können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Ihr Account und gespeicherten Möbelstücke <br>werden dann gelöscht.</p>
+<p style="padding-left: 160px;"> <br>Die Daten werden zudem durch EGGER zur Bereitstellung von anonymisierten Reportings über die Nutzung <br>des Möbelplaners verwendet werden. Rechtsgrundlage hierfür ist das berechtigte Interesse von EGGER an <br>der Produktentwicklung des Möbelplaners. Im Rahmen dessen können weitere Daten zu Analysezwecken <br>erhoben werden. Hierfür ist der Anbieter des Möbelplaners verantwortlich. Weitere Informationen hierzu finden <br>Sie unter www.egger-inside.com <br><br>Darüber hinaus kann es notwendig sein, dass Sie in die Verwendung des Möbelplaners zustimmen müssen, <br>da der Möbelplaner über einen sogenannten iFrame eingebunden werden. Rechtsgrundlage hierfür ist Art. 6 <br>Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG.</p>
+<p style="padding-left: 160px;">Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich <br>sind. Dies ist für die während des Registrierungsvorgangs zur Bearbeitung der Angebotsanfrage sowie zur <br>Durchführung vorvertraglicher Maßnahmen abgegebenen Daten dann der Fall, wenn die Daten für die <br>Durchführung der Angebotsanfrage, der Bestellung oder des sich evtl. anschließenden Vertrages nicht mehr <br>erforderlich sind. Auch nach Abschluss des Vertrags kann eine Erforderlichkeit, personenbezogene Daten des <br>Vertragspartners zu speichern, bestehen, um vertraglichen oder gesetzlichen Verpflichtungen nachzukommen. <br>Wir sind aufgrund handels- und steuerrechtlicher Vorgaben verpflichtet, Ihre Adress-, Zahlungs- und <br>Bestelldaten für die Dauer von 10 Jahren zu speichern.<br>Ihre Daten werden über die Anwendung des Möbelplaners an den Betreiber EGGER Holzwerkstoffe Brilon <br>GmbH&amp;Co KG, Im Kissen 19, D-59929, Brilon übermittelt, gespeichert und zur Abwicklung Ihrer <br>Angebotsanfrage bzw. zur Vertragserfüllung verarbeitet. Zwecks Gewährleistung und Sicherstellung des <br>datenschutzrechtlich-konformen Umgangs mit Ihren Daten haben wir mit EGGER einen Vertrag zur <br>Auftragsverarbeitung abgeschlossen. Zur Verhinderung unberechtigter Zugriffe Dritter auf Ihre persönlichen <br>Daten, insbesondere Finanzdaten, wird der Bestellvorgang per TLS-Technik verschlüsselt.<br>Die Daten werden ausschließlich auf Servern mit Standort in der Europäischen Union gehostet. Hierzu greifen <br>wir auf die Dienstleistungen der Microsoft Azure Cloud zurück. Hierzu haben wir mit Microsoft neben den <br>Standardvertragsklauseln und einem Auftragsverarbeitungsvertrag auch weitreichende Regelungen zum <br>Datenschutz für Microsoft-Onlinedienste (Data Protection Addendum, DPA) abgeschlossen. Es ist vereinbart, <br>dass Microsoft die Daten ausschließlich in der EU speichert. Die Verarbeitung durch Microsoft unterliegt dabei <br>den DSGVO-Bestimmungen nach dem Recht der Europäischen Union.<br>Weitere Informationen zur Durchsetzung Ihrer Rechte bei Microsoft können Sie hier finden: <br>https://privacy.microsoft.com/de-de/privacystatemen</p>
+<h2 style="text-align: left; padding-left: 40px;">Einleitung und Überblick</h2>
+<p style="text-align: left; padding-left: 40px;">Wir haben diese Datenschutzerklärung (Fassung 28.08.2022-122107914) verfasst, um Ihnen gemäß der Vorgaben der <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=122107914#d1e2269-1-1" target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> und anwendbaren nationalen Gesetzen zu erklären, welche personenbezogenen Daten (kurz Daten) wir als Verantwortliche – und die von uns beauftragten Auftragsverarbeiter (z. B. Provider) – verarbeiten, zukünftig verarbeiten werden und welche rechtmäßigen Möglichkeiten Sie haben. Die verwendeten Begriffe sind geschlechtsneutral zu verstehen.<br><strong>Kurz gesagt:</strong> Wir informieren Sie umfassend über Daten, die wir über Sie verarbeiten.</p>
+<p style="text-align: left; padding-left: 40px;">Datenschutzerklärungen klingen für gewöhnlich sehr technisch und verwenden juristische Fachbegriffe. Diese Datenschutzerklärung soll Ihnen hingegen die wichtigsten Dinge so einfach und transparent wie möglich beschreiben. Soweit es der Transparenz förderlich ist, werden technische <strong>Begriffe leserfreundlich erklärt</strong>, Links zu weiterführenden Informationen geboten und <strong>Grafiken</strong> zum Einsatz gebracht. Wir informieren damit in klarer und einfacher Sprache, dass wir im Rahmen unserer Geschäftstätigkeiten nur dann personenbezogene Daten verarbeiten, wenn eine entsprechende gesetzliche Grundlage gegeben ist. Das ist sicher nicht möglich, wenn man möglichst knappe, unklare und juristisch-technische Erklärungen abgibt, so wie sie im Internet oft Standard sind, wenn es um Datenschutz geht. Ich hoffe, Sie finden die folgenden Erläuterungen interessant und informativ und vielleicht ist die eine oder andere Information dabei, die Sie noch nicht kannten.<br>Wenn trotzdem Fragen bleiben, möchten wir Sie bitten, sich an die unten bzw. im Impressum genannte verantwortliche Stelle zu wenden, den vorhandenen Links zu folgen und sich weitere Informationen auf Drittseiten anzusehen. Unsere Kontaktdaten finden Sie selbstverständlich auch im Impressum.</p>
+<h2 style="text-align: left; padding-left: 40px;">Anwendungsbereich</h2>
+<p style="text-align: left; padding-left: 40px;">Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten und für alle personenbezogenen Daten, die von uns beauftragte Firmen (Auftragsverarbeiter) verarbeiten. Mit personenbezogenen Daten meinen wir Informationen im Sinne des Art. 4 Nr. 1 DSGVO wie zum Beispiel Name, E-Mail-Adresse und postalische Anschrift einer Person. Die Verarbeitung personenbezogener Daten sorgt dafür, dass wir unsere Dienstleistungen und Produkte anbieten und abrechnen können, sei es online oder offline. Der Anwendungsbereich dieser Datenschutzerklärung umfasst:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>alle Onlineauftritte (Websites, Onlineshops), die wir betreiben</li>
+<li>Social Media Auftritte und E-Mail-Kommunikation</li>
+<li>mobile Apps für Smartphones und andere Geräte</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: left; padding-left: 40px;"><strong>Kurz gesagt:</strong> Die Datenschutzerklärung gilt für alle Bereiche, in denen personenbezogene Daten im Unternehmen über die genannten Kanäle strukturiert verarbeitet werden. Sollten wir außerhalb dieser Kanäle mit Ihnen in Rechtsbeziehungen eintreten, werden wir Sie gegebenenfalls gesondert informieren.</p>
+<h2 style="text-align: left; padding-left: 40px;">Rechtsgrundlagen</h2>
+<p style="text-align: left; padding-left: 40px;">In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen zu den rechtlichen Grundsätzen und Vorschriften, also den Rechtsgrundlagen der Datenschutz-Grundverordnung, die uns ermöglichen, personenbezogene Daten zu verarbeiten.<br>Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES vom 27. April 2016. Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich online auf EUR-Lex, dem Zugang zum EU-Recht, unter <a href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679">https://eur-lex.europa.eu/legal-content/DE/ALL/?uri&#61;celex%3A32016R0679</a> nachlesen.</p>
+<p style="text-align: left; padding-left: 40px;">Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:</p>
+<ol>
+<li style="list-style-type: none;">
+<ol style="text-align: left;">
+<li><strong>Einwilligung</strong> (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung gegeben, Daten zu einem bestimmten Zweck zu verarbeiten. Ein Beispiel wäre die Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.</li>
+<li><strong>Vertrag</strong> (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag oder vorvertragliche Verpflichtungen mit Ihnen zu erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen wir vorab personenbezogene Informationen.</li>
+<li><strong>Rechtliche Verpflichtung</strong> (Artikel 6 Absatz 1 lit. c DSGVO): Wenn wir einer rechtlichen Verpflichtung unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel sind wir gesetzlich verpflichtet Rechnungen für die Buchhaltung aufzuheben. Diese enthalten in der Regel personenbezogene Daten.</li>
+<li><strong>Berechtigte Interessen</strong> (Artikel 6 Absatz 1 lit. f DSGVO): Im Falle berechtigter Interessen, die Ihre Grundrechte nicht einschränken, behalten wir uns die Verarbeitung personenbezogener Daten vor. Wir müssen zum Beispiel gewisse Daten verarbeiten, um unsere Website sicher und wirtschaftlich effizient betreiben zu können. Diese Verarbeitung ist somit ein berechtigtes Interesse.</li>
+</ol>
+</li>
+</ol>
+<p style="text-align: left; padding-left: 40px;">Weitere Bedingungen wie die Wahrnehmung von Aufnahmen im öffentlichen Interesse und Ausübung öffentlicher Gewalt sowie dem Schutz lebenswichtiger Interessen treten bei uns in der Regel nicht auf. Soweit eine solche Rechtsgrundlage doch einschlägig sein sollte, wird diese an der entsprechenden Stelle ausgewiesen.</p>
+<p style="text-align: left; padding-left: 40px;">Zusätzlich zu der EU-Verordnung gelten auch noch nationale Gesetze:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>In <strong>Österreich</strong> ist dies das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten (<strong>Datenschutzgesetz</strong>), kurz <strong>DSG</strong>.</li>
+<li>In <strong>Deutschland</strong> gilt das <strong>Bundesdatenschutzgesetz</strong>, kurz<strong> BDSG</strong>.</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: left; padding-left: 40px;">Sofern weitere regionale oder nationale Gesetze zur Anwendung kommen, informieren wir Sie in den folgenden Abschnitten darüber.</p>
+<h2 style="text-align: left; padding-left: 40px;">Kontaktdaten des Verantwortlichen</h2>
+<p style="text-align: left; padding-left: 40px;">Sollten Sie Fragen zum Datenschutz oder zur Verarbeitung personenbezogener Daten haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw. Stelle:<br><span>Tischlerei Hicker GmbH<br>Schießstättenstr. 1<br>3032 Eichgraben</span></p>
+<p style="text-align: left; padding-left: 40px;">E-Mail: &#116;&#x69;&#115;&#x63;&#104;&#x6C;&#101;&#x72;&#101;&#x69;&#64;&#x74;&#105;&#x73;&#99;&#x68;&#108;&#x65;&#114;&#x65;&#105;&#x68;&#105;&#x63;&#107;&#x65;&#114;&#x2E;&#97;&#x74;;office@tischlereihicker.at<br>Telefon: <a href="tel:+43 2773  43347-14">+43 2773 43347-14</a> <br>Impressum: <a href="https://www.tischlereihicker.at/impressum">https://www.tischlereihicker.at/impressum</a></p>
+<p style="text-align: left; padding-left: 40px;">Fotos Wolfgang Hicker &amp; Team <br>© Martin Böhm</p>
+<h2 style="text-align: left; padding-left: 40px;">Speicherdauer</h2>
+<p style="text-align: left; padding-left: 40px;">Dass wir personenbezogene Daten nur so lange speichern, wie es für die Bereitstellung unserer Dienstleistungen und Produkte unbedingt notwendig ist, gilt als generelles Kriterium bei uns. Das bedeutet, dass wir personenbezogene Daten löschen, sobald der Grund für die Datenverarbeitung nicht mehr vorhanden ist. In einigen Fällen sind wir gesetzlich dazu verpflichtet, bestimmte Daten auch nach Wegfall des ursprüngliches Zwecks zu speichern, zum Beispiel zu Zwecken der Buchführung.</p>
+<p style="text-align: left; padding-left: 40px;">Sollten Sie die Löschung Ihrer Daten wünschen oder die Einwilligung zur Datenverarbeitung widerrufen, werden die Daten so rasch wie möglich und soweit keine Pflicht zur Speicherung besteht, gelöscht.</p>
+<p style="text-align: left; padding-left: 40px;">Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir Sie weiter unten, sofern wir weitere Informationen dazu haben.</p>
+<h2 style="text-align: left; padding-left: 40px;">Rechte laut Datenschutz-Grundverordnung</h2>
+<p style="text-align: left; padding-left: 40px;">Gemäß Artikel 13, 14 DSGVO informieren wir Sie über die folgenden Rechte, die Ihnen zustehen, damit es zu einer fairen und transparenten Verarbeitung von Daten kommt:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten von Ihnen verarbeiten. Sollte das zutreffen, haben Sie Recht darauf eine Kopie der Daten zu erhalten und die folgenden Informationen zu erfahren:
+<ul>
+<li>zu welchem Zweck wir die Verarbeitung durchführen;</li>
+<li>die Kategorien, also die Arten von Daten, die verarbeitet werden;</li>
+<li>wer diese Daten erhält und wenn die Daten an Drittländer übermittelt werden, wie die Sicherheit garantiert werden kann;</li>
+<li>wie lange die Daten gespeichert werden;</li>
+<li>das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung der Verarbeitung und dem Widerspruchsrecht gegen die Verarbeitung;</li>
+<li>dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu diesen Behörden finden Sie weiter unten);</li>
+<li>die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;</li>
+<li>ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet werden, um zu einem persönlichen Profil von Ihnen zu gelangen.</li>
+</ul>
+</li>
+<li>Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was bedeutet, dass wir Daten richtig stellen müssen, falls Sie Fehler finden.</li>
+<li>Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf Vergessenwerden“), was konkret bedeutet, dass Sie die Löschung Ihrer Daten verlangen dürfen.</li>
+<li>Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der Verarbeitung, was bedeutet, dass wir die Daten nur mehr speichern dürfen aber nicht weiter verwenden.</li>
+<li>Sie haben laut Artikel 20 DSGVO das Recht auf Datenübertragbarkeit, was bedeutet, dass wir Ihnen auf Anfrage Ihre Daten in einem gängigen Format zur Verfügung stellen.</li>
+<li>Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach Durchsetzung eine Änderung der Verarbeitung mit sich bringt.
+<ul>
+<li>Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e (öffentliches Interesse, Ausübung öffentlicher Gewalt) oder Artikel 6 Abs. 1 lit. f (berechtigtes Interesse) basiert, können Sie gegen die Verarbeitung Widerspruch einlegen. Wir prüfen danach so rasch wie möglich, ob wir diesem Widerspruch rechtlich nachkommen können.</li>
+<li>Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach nicht mehr für Direktmarketing verwenden.</li>
+<li>Werden Daten verwendet, um Profiling zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach nicht mehr für Profiling verwenden.</li>
+</ul>
+</li>
+<li>Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung (zum Beispiel Profiling) beruhenden Entscheidung unterworfen zu werden.</li>
+<li>Sie haben laut Artikel 77 DSGVO das Recht auf Beschwerde. Das heißt, Sie können sich jederzeit bei der Datenschutzbehörde beschweren, wenn Sie der Meinung sind, dass die Datenverarbeitung von personenbezogenen Daten gegen die DSGVO verstößt.</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: left; padding-left: 40px;"><strong>Kurz gesagt:</strong> Sie haben Rechte – zögern Sie nicht, die oben gelistete verantwortliche Stelle bei uns zu kontaktieren!</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche in sonst einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren. Diese ist für Österreich die Datenschutzbehörde, deren Website Sie unter <a href="https://www.dsb.gv.at/?tid=122107914" target="_blank" rel="noopener">https://www.dsb.gv.at/</a> finden. In Deutschland gibt es für jedes Bundesland einen Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die <a href="https://www.bfdi.bund.de/DE/Home/home_node.html" target="_blank" rel="noopener">Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)</a> wenden. Für unser Unternehmen ist die folgende lokale Datenschutzbehörde zuständig:</p>
+<h2 style="text-align: left; padding-left: 40px;">Österreich Datenschutzbehörde</h2>
+<p style="text-align: left; padding-left: 40px;"><strong>Leiterin: </strong>Mag. Dr. Andrea Jelinek<strong> <br>Adresse: </strong>Barichgasse 40-42, 1030 Wien<strong> <br>Telefonnr.: </strong>+43 1 52 152-0<strong> <br>E-Mail-Adresse: </strong> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#x73;&#98;&#x40;&#100;&#x73;&#98;&#x2E;&#103;&#x76;&#46;&#x61;&#116;" target="_blank" rel="noopener">&#100;&#x73;&#98;&#x40;&#100;&#x73;&#98;&#x2E;&#103;&#x76;&#46;&#x61;&#116;</a> <strong> <br>Website: </strong> <a href="https://www.dsb.gv.at/" target="_blank" rel="noopener">https://www.dsb.gv.at/</a></p>
+<h2 style="text-align: left; padding-left: 40px;">Sicherheit der Datenverarbeitung</h2>
+<p style="text-align: left; padding-left: 40px;">Um personenbezogene Daten zu schützen, haben wir sowohl technische als auch organisatorische Maßnahmen umgesetzt. Wo es uns möglich ist, verschlüsseln oder pseudonymisieren wir personenbezogene Daten. Dadurch machen wir es im Rahmen unserer Möglichkeiten so schwer wie möglich, dass Dritte aus unseren Daten auf persönliche Informationen schließen können.</p>
+<p style="text-align: left; padding-left: 40px;">Art. 25 DSGVO spricht hier von “Datenschutz durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen” und meint damit, dass man sowohl bei Software (z. B. Formularen) also auch Hardware (z. B. Zugang zum Serverraum) immer an Sicherheit denkt und entsprechende Maßnahmen setzt. Im Folgenden gehen wir, falls erforderlich, noch auf konkrete Maßnahmen ein.</p>
+<h2 style="text-align: left; padding-left: 40px;">TLS-Verschlüsselung mit https</h2>
+<p style="text-align: left; padding-left: 40px;">TLS, Verschlüsselung und https klingen sehr technisch und sind es auch. Wir verwenden HTTPS (das Hypertext Transfer Protocol Secure steht für „sicheres Hypertext-Übertragungsprotokoll“), um Daten abhörsicher im Internet zu übertragen.<br>Das bedeutet, dass die komplette Übertragung aller Daten von Ihrem Browser zu unserem Webserver abgesichert ist – niemand kann “mithören”.</p>
+<p style="text-align: left; padding-left: 40px;">Damit haben wir eine zusätzliche Sicherheitsschicht eingeführt und erfüllen den Datenschutz durch Technikgestaltung (<a href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=122107914" target="_blank" rel="noopener">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS (Transport Layer Security), einem Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet, können wir den Schutz vertraulicher Daten sicherstellen.<br>Sie erkennen die Benutzung dieser Absicherung der Datenübertragung am kleinen Schlosssymbol <img src="https://www.adsimple.at/wp-content/uploads/2018/03/schlosssymbol-https.svg" width="17" height="18"> links oben im Browser, links von der Internetadresse (z. B. beispielseite.de) und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.<br>Wenn Sie mehr zum Thema Verschlüsselung wissen möchten, empfehlen wir die Google Suche nach “Hypertext Transfer Protocol Secure wiki” um gute Links zu weiterführenden Informationen zu erhalten.</p>
+<h2 style="text-align: left; padding-left: 40px;">Kommunikation</h2>
+<table style="margin-left: 40px; margin-right: auto;" border="1" cellpadding="15">
+<tbody style="padding-left: 40px;">
+<tr style="padding-left: 40px;">
+<td style="padding-left: 40px;"><strong>Kommunikation Zusammenfassung</strong> <br>👥 Betroffene: Alle, die mit uns per Telefon, E-Mail oder Online-Formular kommunizieren<br>📓 Verarbeitete Daten: z. B. Telefonnummer, Name, E-Mail-Adresse, eingegebene Formulardaten. Mehr Details dazu finden Sie bei der jeweils eingesetzten Kontaktart<br>🤝 Zweck: Abwicklung der Kommunikation mit Kunden, Geschäftspartnern usw.<br>📅 Speicherdauer: Dauer des Geschäftsfalls und der gesetzlichen Vorschriften<br>⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), Art. 6 Abs. 1 lit. b DSGVO (Vertrag), Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie mit uns Kontakt aufnehmen und per Telefon, E-Mail oder Online-Formular kommunizieren, kann es zur Verarbeitung personenbezogener Daten kommen.</p>
+<p style="text-align: left; padding-left: 40px;">Die Daten werden für die Abwicklung und Bearbeitung Ihrer Frage und des damit zusammenhängenden Geschäftsvorgangs verarbeitet. Die Daten während eben solange gespeichert bzw. solange es das Gesetz vorschreibt.</p>
+<h3 style="text-align: left; padding-left: 40px;">Betroffene Personen</h3>
+<p style="text-align: left; padding-left: 40px;">Von den genannten Vorgängen sind alle betroffen, die über die von uns bereit gestellten Kommunikationswege den Kontakt zu uns suchen.</p>
+<h3 style="text-align: left; padding-left: 40px;">Telefon</h3>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie uns anrufen, werden die Anrufdaten auf dem jeweiligen Endgerät und beim eingesetzten Telekommunikationsanbieter pseudonymisiert gespeichert. Außerdem können Daten wie Name und Telefonnummer im Anschluss per E-Mail versendet und zur Anfragebeantwortung gespeichert werden. Die Daten werden gelöscht, sobald der Geschäftsfall beendet wurde und es gesetzliche Vorgaben erlauben.</p>
+<h3 style="text-align: left; padding-left: 40px;">E-Mail</h3>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie mit uns per E-Mail kommunizieren, werden Daten gegebenenfalls auf dem jeweiligen Endgerät (Computer, Laptop, Smartphone,…) gespeichert und es kommt zur Speicherung von Daten auf dem E-Mail-Server. Die Daten werden gelöscht, sobald der Geschäftsfall beendet wurde und es gesetzliche Vorgaben erlauben.</p>
+<h3 style="text-align: left; padding-left: 40px;">Online Formulare</h3>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie mit uns mittels Online-Formular kommunizieren, werden Daten auf unserem Webserver gespeichert und gegebenenfalls an eine E-Mail-Adresse von uns weitergeleitet. Die Daten werden gelöscht, sobald der Geschäftsfall beendet wurde und es gesetzliche Vorgaben erlauben.</p>
+<h3 style="text-align: left; padding-left: 40px;">Rechtsgrundlagen</h3>
+<p style="text-align: left; padding-left: 40px;">Die Verarbeitung der Daten basiert auf den folgenden Rechtsgrundlagen:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung): Sie geben uns die Einwilligung Ihre Daten zu speichern und weiter für den Geschäftsfall betreffende Zwecke zu verwenden;</li>
+<li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag): Es besteht die Notwendigkeit für die Erfüllung eines Vertrags mit Ihnen oder einem Auftragsverarbeiter wie z. B. dem Telefonanbieter oder wir müssen die Daten für vorvertragliche Tätigkeiten, wie z. B. die Vorbereitung eines Angebots, verarbeiten;</li>
+<li>Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen): Wir wollen Kundenanfragen und geschäftliche Kommunikation in einem professionellen Rahmen betreiben. Dazu sind gewisse technische Einrichtungen wie z. B. E-Mail-Programme, Exchange-Server und Mobilfunkbetreiber notwendig, um die Kommunikation effizient betreiben zu können.</li>
+</ul>
+</li>
+</ul>
+<h2 style="text-align: left; padding-left: 40px;">Auftragsverarbeitungsvertrag (AVV)</h2>
+<p style="text-align: left; padding-left: 40px;">In diesem Abschnitt möchten wir Ihnen erklären, was ein Auftragsverarbeitungsvertrag ist und warum dieser benötigt wird. Weil das Wort “Auftragsverarbeitungsvertrag” ein ziemlicher Zungenbrecher ist, werden wir hier im Text auch öfters nur das Akronym AVV benutzen. Wie die meisten Unternehmen arbeiten wir nicht alleine, sondern nehmen auch selbst Dienstleistungen anderer Unternehmen oder Einzelpersonen in Anspruch.&nbsp; Durch die Einbeziehung verschiedener Unternehmen bzw. Dienstleister kann es sein, dass wir&nbsp; personenbezogene Daten zur Verarbeitung weitergeben. Diese Partner fungieren dann als Auftragsverarbeiter, mit denen wir einen Vertrag, den sogenannten Auftragsverarbeitungsvertrag (AVV), abschließen. Für Sie am wichtigsten zu wissen ist, dass die Verarbeitung Ihrer personenbezogenen Daten ausschließlich nach unserer Weisung erfolgt und durch den AVV geregelt werden muss.</p>
+<h3 style="text-align: left; padding-left: 40px;">Wer sind Auftragsverarbeiter?</h3>
+<p style="text-align: left; padding-left: 40px;">Wir sind als Unternehmen und Websiteinhaber für alle Daten, die wir von Ihnen verarbeiten verantwortlich. Neben den Verantwortlichen kann es auch sogenannte Auftragsverarbeiter geben. Dazu zählt jedes Unternehmen bzw. jede Person, die in unserem Auftrag personenbezogene Daten verarbeitet. Genauer und nach der DSGVO-Definition gesagt: jede natürliche oder juristische Person, Behörde, Einrichtung oder eine andere Stelle, die in unserem Auftrag personenbezogene Daten verarbeitet, gilt als Auftragsverarbeiter. Auftragsverarbeiter können folglich Dienstleister wie Hosting- oder Cloudanbieter, Bezahlungs- oder Newsletter-Anbieter oder große Unternehmen wie beispielsweise Google oder Microsoft sein.</p>
+<p style="text-align: left; padding-left: 40px;">Zur besseren Verständlichkeit der Begrifflichkeiten hier ein Überblick über die drei Rollen in der DSGVO:</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Betroffener</strong> (Sie als Kunde oder Interessent) → <strong>Verantwortlicher</strong> (wir als Unternehmen und Auftraggeber) → <strong>Auftragsverarbeiter</strong> (Dienstleister wie z. B. Webhoster oder Cloudanbieter)</p>
+<h3 style="text-align: left; padding-left: 40px;">Inhalt eines Auftragsverarbeitungsvertrages</h3>
+<p style="text-align: left; padding-left: 40px;">Wie bereits oben erwähnt, haben wir mit unseren Partnern, die als Auftragsverarbeiter fungieren, einen AVV abgeschlossen. Darin wird allen voran festgehalten, dass der Auftragsverarbeiter die zu bearbeitenden Daten ausschließlich gemäß der DSGVO verarbeitet. Der Vertrag muss schriftlich abgeschlossen werden, allerdings gilt in diesem Zusammenhang auch der elektronische Vertragsabschluss als „schriftlich“. Erst auf der Grundlage des Vertrags erfolgt die Verarbeitung der personenbezogenen Daten. Im Vertrag muss folgendes enthalten sein:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>Bindung an uns als Verantwortlichen</li>
+<li>Pflichten und Rechte des Verantwortlichen</li>
+<li>Kategorien betroffener Personen</li>
+<li>Art der personenbezogenen Daten</li>
+<li>Art und Zweck der Datenverarbeitung</li>
+<li>Gegenstand und Dauer der Datenverarbeitung</li>
+<li>Durchführungsort der Datenverarbeitung</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: left; padding-left: 40px;">Weiters enthält der Vertrag alle Pflichten des Auftragsverarbeiters. Die wichtigsten Pflichten sind:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>Maßnahmen zur Datensicherheit zu gewährleisten</li>
+<li>mögliche technische und organisatorischen Maßnahmen zu treffen, um die Rechte der betroffenen Person zu schützen</li>
+<li>ein Daten-Verarbeitungsverzeichnis zu führen</li>
+<li>auf Anfrage der Datenschutz-Aufsichtsbehörde mit dieser zusammenzuarbeiten</li>
+<li>eine Risikoanalyse in Bezug auf die erhaltenen personenbezogenen Daten durchzuführen</li>
+<li>Sub-Auftragsverarbeiter dürfen nur mit schriftlicher Genehmigung des Verantwortlichen beauftragt werden</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: left; padding-left: 40px;">Wie so eine AVV konkret aussieht, können Sie sich beispielsweise unter <a href="https://www.wko.at/service/wirtschaftsrecht-gewerberecht/eu-dsgvo-mustervertrag-auftragsverarbeitung.html">https://www.wko.at/service/wirtschaftsrecht-gewerberecht/eu-dsgvo-mustervertrag-auftragsverarbeitung.html</a> ansehen. Hier wird ein Mustervertrag vorgestellt.</p>
+<h2 style="text-align: left; padding-left: 40px;">Cookies</h2>
+<table style="margin-left: 40px; margin-right: auto;" border="1" cellpadding="15">
+<tbody style="padding-left: 40px;">
+<tr style="padding-left: 40px;">
+<td style="padding-left: 40px;"><strong>Cookies Zusammenfassung</strong> <br>👥 Betroffene: Besucher der Website<br>🤝 Zweck: abhängig vom jeweiligen Cookie. Mehr Details dazu finden Sie weiter unten bzw. beim Hersteller der Software, der das Cookie setzt.<br>📓 Verarbeitete Daten: Abhängig vom jeweils eingesetzten Cookie. Mehr Details dazu finden Sie weiter unten bzw. beim Hersteller der Software, der das Cookie setzt.<br>📅 Speicherdauer: abhängig vom jeweiligen Cookie, kann von Stunden bis hin zu Jahren variieren<br>⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), Art. 6 Abs. 1 lit.f DSGVO (Berechtigte Interessen)</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: left; padding-left: 40px;">Was sind Cookies?</h3>
+<p style="text-align: left; padding-left: 40px;">Unsere Website verwendet HTTP-Cookies, um nutzerspezifische Daten zu speichern.<br>Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende Datenschutzerklärung besser verstehen.</p>
+<p style="text-align: left; padding-left: 40px;">Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise Chrome, Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Websites speichern kleine Text-Dateien in Ihrem Browser. Diese Dateien nennt man Cookies.</p>
+<p style="text-align: left; padding-left: 40px;">Eines ist nicht von der Hand zu weisen: Cookies sind echt nützliche Helferlein. Fast alle Websites verwenden Cookies. Genauer gesprochen sind es HTTP-Cookies, da es auch noch andere Cookies für andere Anwendungsbereiche gibt. HTTP-Cookies sind kleine Dateien, die von unserer Website auf Ihrem Computer gespeichert werden. Diese Cookie-Dateien werden automatisch im Cookie-Ordner, quasi dem “Hirn” Ihres Browsers, untergebracht. Ein Cookie besteht aus einem Namen und einem Wert. Bei der Definition eines Cookies müssen zusätzlich ein oder mehrere Attribute angegeben werden.</p>
+<p style="text-align: left; padding-left: 40px;">Cookies speichern gewisse Nutzerdaten von Ihnen, wie beispielsweise Sprache oder persönliche Seiteneinstellungen. Wenn Sie unsere Seite wieder aufrufen, übermittelt Ihr Browser die „userbezogenen“ Informationen an unsere Seite zurück. Dank der Cookies weiß unsere Website, wer Sie sind und bietet Ihnen die Einstellung, die Sie gewohnt sind. In einigen Browsern hat jedes Cookie eine eigene Datei, in anderen wie beispielsweise Firefox sind alle Cookies in einer einzigen Datei gespeichert.</p>
+<p style="text-align: left; padding-left: 40px;">Die folgende Grafik zeigt eine mögliche Interaktion zwischen einem Webbrowser wie z. B. Chrome und dem Webserver. Dabei fordert der Webbrowser eine Website an und erhält vom Server ein Cookie zurück, welches der Browser erneut verwendet, sobald eine andere Seite angefordert wird.</p>
+<p style="text-align: left; padding-left: 40px;"><img src="https://www.adsimple.at/wp-content/uploads/2018/03/http-cookie-interaction.svg" alt="HTTP Cookie Interaktion zwischen Browser und Webserver" width="100%"></p>
+<p style="text-align: left; padding-left: 40px;">Es gibt sowohl Erstanbieter Cookies als auch Drittanbieter-Cookies. Erstanbieter-Cookies werden direkt von unserer Seite erstellt, Drittanbieter-Cookies werden von Partner-Websites (z.B. Google Analytics) erstellt. Jedes Cookie ist individuell zu bewerten, da jedes Cookie andere Daten speichert. Auch die Ablaufzeit eines Cookies variiert von ein paar Minuten bis hin zu ein paar Jahren. Cookies sind keine Software-Programme und enthalten keine Viren, Trojaner oder andere „Schädlinge“. Cookies können auch nicht auf Informationen Ihres PCs zugreifen.</p>
+<p style="text-align: left; padding-left: 40px;">So können zum Beispiel Cookie-Daten aussehen:</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Name:</strong> _ga<br><strong>Wert:</strong> GA1.2.1326744211.152122107914-9<br><strong>Verwendungszweck:</strong> Unterscheidung der Websitebesucher<br><strong>Ablaufdatum:</strong> nach 2 Jahren</p>
+<p style="text-align: left; padding-left: 40px;">Diese Mindestgrößen sollte ein Browser unterstützen können:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>Mindestens 4096 Bytes pro Cookie</li>
+<li>Mindestens 50 Cookies pro Domain</li>
+<li>Mindestens 3000 Cookies insgesamt</li>
+</ul>
+</li>
+</ul>
+<h3 style="text-align: left; padding-left: 40px;">Welche Arten von Cookies gibt es?</h3>
+<p style="text-align: left; padding-left: 40px;">Die Frage welche Cookies wir im Speziellen verwenden, hängt von den verwendeten Diensten ab und wird in den folgenden Abschnitten der Datenschutzerklärung geklärt. An dieser Stelle möchten wir kurz auf die verschiedenen Arten von HTTP-Cookies eingehen.</p>
+<p style="text-align: left; padding-left: 40px;">Man kann 4 Arten von Cookies unterscheiden:</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Unerlässliche Cookies<br></strong>Diese Cookies sind nötig, um grundlegende Funktionen der Website sicherzustellen. Zum Beispiel braucht es diese Cookies, wenn ein User ein Produkt in den Warenkorb legt, dann auf anderen Seiten weitersurft und später erst zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gelöscht, selbst wenn der User sein Browserfenster schließt.</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Zweckmäßige Cookies<br></strong>Diese Cookies sammeln Infos über das Userverhalten und ob der User etwaige Fehlermeldungen bekommt. Zudem werden mithilfe dieser Cookies auch die Ladezeit und das Verhalten der Website bei verschiedenen Browsern gemessen.</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Zielorientierte Cookies<br></strong>Diese Cookies sorgen für eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene Standorte, Schriftgrößen oder Formulardaten gespeichert.</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Werbe-Cookies<br></strong>Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu dem User individuell angepasste Werbung zu liefern. Das kann sehr praktisch, aber auch sehr nervig sein.</p>
+<p style="text-align: left; padding-left: 40px;">Üblicherweise werden Sie beim erstmaligen Besuch einer Website gefragt, welche dieser Cookiearten Sie zulassen möchten. Und natürlich wird diese Entscheidung auch in einem Cookie gespeichert.</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie mehr über Cookies wissen möchten und technische Dokumentationen nicht scheuen, empfehlen wir <a href="https://datatracker.ietf.org/doc/html/rfc6265">https://datatracker.ietf.org/doc/html/rfc6265</a>, dem Request for Comments der Internet Engineering Task Force (IETF) namens “HTTP State Management Mechanism”.</p>
+<h3 style="text-align: left; padding-left: 40px;">Zweck der Verarbeitung über Cookies</h3>
+<p style="text-align: left; padding-left: 40px;">Der Zweck ist letztendlich abhängig vom jeweiligen Cookie. Mehr Details dazu finden Sie weiter unten bzw. beim Hersteller der Software, die das Cookie setzt.</p>
+<h3 style="text-align: left; padding-left: 40px;">Welche Daten werden verarbeitet?</h3>
+<p style="text-align: left; padding-left: 40px;">Cookies sind kleine Gehilfen für eine viele verschiedene Aufgaben. Welche Daten in Cookies gespeichert werden, kann man leider nicht verallgemeinern, aber wir werden Sie im Rahmen der folgenden Datenschutzerklärung über die verarbeiteten bzw. gespeicherten Daten informieren.</p>
+<h3 style="text-align: left; padding-left: 40px;">Speicherdauer von Cookies</h3>
+<p style="text-align: left; padding-left: 40px;">Die Speicherdauer hängt vom jeweiligen Cookie ab und wird weiter unter präzisiert. Manche Cookies werden nach weniger als einer Stunde gelöscht, andere können mehrere Jahre auf einem Computer gespeichert bleiben.</p>
+<p style="text-align: left; padding-left: 40px;">Sie haben außerdem selbst Einfluss auf die Speicherdauer. Sie können über ihren Browser sämtliche Cookies jederzeit manuell löschen (siehe auch unten “Widerspruchsrecht”). Ferner werden Cookies, die auf einer Einwilligung beruhen, spätestens nach Widerruf Ihrer Einwilligung gelöscht, wobei die Rechtmäßigkeit der Speicherung bis dahin unberührt bleibt.</p>
+<h3 style="text-align: left; padding-left: 40px;">Widerspruchsrecht – wie kann ich Cookies löschen?</h3>
+<p style="text-align: left; padding-left: 40px;">Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst. Unabhängig von welchem Service oder welcher Website die Cookies stammen, haben Sie immer die Möglichkeit Cookies zu löschen, zu deaktivieren oder nur teilweise zuzulassen. Zum Beispiel können Sie Cookies von Drittanbietern blockieren, aber alle anderen Cookies zulassen.</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie feststellen möchten, welche Cookies in Ihrem Browser gespeichert wurden, wenn Sie Cookie-Einstellungen ändern oder löschen wollen, können Sie dies in Ihren Browser-Einstellungen finden:</p>
+<p style="text-align: left; padding-left: 40px;"><a href="https://support.google.com/chrome/answer/95647?tid=122107914" target="_blank" rel="noopener noreferrer">Chrome: Cookies in Chrome löschen, aktivieren und verwalten</a></p>
+<p style="text-align: left; padding-left: 40px;"><a href="https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=122107914" target="_blank" rel="noopener noreferrer">Safari: Verwalten von Cookies und Websitedaten mit Safari</a></p>
+<p style="text-align: left; padding-left: 40px;"><a href="https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=122107914" target="_blank" rel="noopener noreferrer">Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben</a></p>
+<p style="text-align: left; padding-left: 40px;"><a href="https://support.microsoft.com/de-de/windows/l%C3%B6schen-und-verwalten-von-cookies-168dab11-0753-043d-7c16-ede5947fc64d?tid=122107914">Internet Explorer: Löschen und Verwalten von Cookies</a></p>
+<p style="text-align: left; padding-left: 40px;"><a href="https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09?tid=122107914">Microsoft Edge: Löschen und Verwalten von Cookies</a></p>
+<p style="text-align: left; padding-left: 40px;">Falls Sie grundsätzlich keine Cookies haben wollen, können Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So können Sie bei jedem einzelnen Cookie entscheiden, ob Sie das Cookie erlauben oder nicht. Die Vorgangsweise ist je nach Browser verschieden. Am besten Sie suchen die Anleitung in Google mit dem Suchbegriff “Cookies löschen Chrome” oder “Cookies deaktivieren Chrome” im Falle eines Chrome Browsers.</p>
+<h3 style="text-align: left; padding-left: 40px;">Rechtsgrundlage</h3>
+<p style="text-align: left; padding-left: 40px;">Seit 2009 gibt es die sogenannten „Cookie-Richtlinien“. Darin ist festgehalten, dass das Speichern von Cookies eine <strong>Einwilligung</strong> (Artikel 6 Abs. 1 lit. a DSGVO) von Ihnen verlangt. Innerhalb der EU-Länder gibt es allerdings noch sehr unterschiedliche Reaktionen auf diese Richtlinien. In Österreich erfolgte aber die Umsetzung dieser Richtlinie in § 96 Abs. 3 des Telekommunikationsgesetzes (TKG). In Deutschland wurden die Cookie-Richtlinien nicht als nationales Recht umgesetzt. Stattdessen erfolgte die Umsetzung dieser Richtlinie weitgehend in § 15 Abs.3 des Telemediengesetzes (TMG).</p>
+<p style="text-align: left; padding-left: 40px;">Für unbedingt notwendige Cookies, auch soweit keine Einwilligung vorliegt, bestehen <strong>berechtigte Interessen</strong> (Artikel 6 Abs. 1 lit. f DSGVO), die in den meisten Fällen wirtschaftlicher Natur sind. Wir möchten den Besuchern der Website eine angenehme Benutzererfahrung bescheren und dafür sind bestimmte Cookies oft unbedingt notwendig.</p>
+<p style="text-align: left; padding-left: 40px;">Soweit nicht unbedingt erforderliche Cookies zum Einsatz kommen, geschieht dies nur im Falle Ihrer Einwilligung. Rechtsgrundlage ist insoweit Art. 6 Abs. 1 lit. a DSGVO.</p>
+<p style="text-align: left; padding-left: 40px;">In den folgenden Abschnitten werden Sie genauer über den Einsatz von Cookies informiert, sofern eingesetzte Software Cookies verwendet.</p>
+<h2 style="text-align: left; padding-left: 40px;">Webhosting Einleitung</h2>
+<table style="margin-left: 40px; margin-right: auto;" border="1" cellpadding="15">
+<tbody style="padding-left: 40px;">
+<tr style="padding-left: 40px;">
+<td style="padding-left: 40px;"><strong>Webhosting Zusammenfassung</strong> <br>👥 Betroffene: Besucher der Website<br>🤝 Zweck: professionelles Hosting der Website und Absicherung des Betriebs<br>📓 Verarbeitete Daten: IP-Adresse, Zeitpunkt des Websitebesuchs, verwendeter Browser und weitere Daten. Mehr Details dazu finden Sie weiter unten bzw. beim jeweils eingesetzten Webhosting Provider.<br>📅 Speicherdauer: abhängig vom jeweiligen Provider, aber in der Regel 2 Wochen<br>⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit.f DSGVO (Berechtigte Interessen)</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: left; padding-left: 40px;">Was ist Webhosting?</h3>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie heutzutage Websites besuchen, werden gewisse Informationen – auch personenbezogene Daten – automatisch erstellt und gespeichert, so auch auf dieser Website. Diese Daten sollten möglichst sparsam und nur mit Begründung verarbeitet werden. Mit Website meinen wir übrigens die Gesamtheit aller Webseiten auf einer Domain, d.h. alles von der Startseite (Homepage) bis hin zur aller letzten Unterseite (wie dieser hier). Mit Domain meinen wir zum Beispiel beispiel.de oder musterbeispiel.com.</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie eine Website auf einem Computer, Tablet oder Smartphone ansehen möchten, verwenden Sie dafür ein Programm, das sich Webbrowser nennt. Sie kennen vermutlich einige Webbrowser beim Namen: Google Chrome, Microsoft Edge, Mozilla Firefox und Apple Safari. Wir sagen kurz Browser oder Webbrowser dazu.</p>
+<p style="text-align: left; padding-left: 40px;">Um die Website anzuzeigen, muss sich der Browser zu einem anderen Computer verbinden, wo der Code der Website gespeichert ist: dem Webserver. Der Betrieb eines Webservers ist eine komplizierte und aufwendige Aufgabe, weswegen dies in der Regel von professionellen Anbietern, den Providern, übernommen wird. Diese bieten Webhosting an und sorgen damit für eine verlässliche und fehlerfreie Speicherung der Daten von Websites. Eine ganze Menge Fachbegriffe, aber bitte bleiben Sie dran, es wird noch besser!</p>
+<p style="text-align: left; padding-left: 40px;">Bei der Verbindungsaufnahme des Browsers auf Ihrem Computer (Desktop, Laptop, Tablet oder Smartphone) und während der Datenübertragung zu und vom Webserver kann es zu einer Verarbeitung personenbezogener Daten kommen. Einerseits speichert Ihr Computer Daten, andererseits muss auch der Webserver Daten eine Zeit lang speichern, um einen ordentlichen Betrieb zu gewährleisten.</p>
+<p style="text-align: left; padding-left: 40px;">Ein Bild sagt mehr als tausend Worte, daher zeigt folgende Grafik zur Veranschaulichung das Zusammenspiel zwischen Browser, dem Internet und dem Hosting-Provider.</p>
+<p style="text-align: left; padding-left: 40px;"><img src="https://www.adsimple.at/wp-content/uploads/2018/03/browser-und-webserver.svg" alt="Browser und Webserver" width="100%"></p>
+<h3 style="text-align: left; padding-left: 40px;">Warum verarbeiten wir personenbezogene Daten?</h3>
+<p style="text-align: left; padding-left: 40px;">Die Zwecke der Datenverarbeitung sind:</p>
+<ol>
+<li style="list-style-type: none;">
+<ol style="text-align: left;">
+<li>Professionelles Hosting der Website und Absicherung des Betriebs</li>
+<li>zur Aufrechterhaltung der Betriebs- und IT-Sicherheit</li>
+<li>Anonyme Auswertung des Zugriffsverhaltens zur Verbesserung unseres Angebots und ggf. zur Strafverfolgung bzw. Verfolgung von Ansprüchen</li>
+</ol>
+</li>
+</ol>
+<h3 style="text-align: left; padding-left: 40px;">Welche Daten werden verarbeitet?</h3>
+<p style="text-align: left; padding-left: 40px;">Auch während Sie unsere Website jetzt gerade besuchen, speichert unser Webserver, das ist der Computer auf dem diese Webseite gespeichert ist, in der Regel automatisch Daten wie</p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="text-align: left;">
+<li>die komplette Internetadresse (URL) der aufgerufenen Webseite</li>
+<li>Browser und Browserversion (z. B. Chrome 87)</li>
+<li>das verwendete Betriebssystem (z. B. Windows 10)</li>
+<li>die Adresse (URL) der zuvor besuchten Seite (Referrer URL) (z. B. <a href="https://www.beispielquellsite.de/vondabinichgekommen/" target="_blank" rel="follow noopener">https://www.beispielquellsite.de/vondabinichgekommen/</a>)</li>
+<li>den Hostnamen und die IP-Adresse des Geräts von welchem aus zugegriffen wird (z. B. COMPUTERNAME und 194.23.43.121)</li>
+<li>Datum und Uhrzeit</li>
+<li>in Dateien, den sogenannten Webserver-Logfiles</li>
+</ul>
+</li>
+</ul>
+<h3 style="text-align: left; padding-left: 40px;">Wie lange werden Daten gespeichert?</h3>
+<p style="text-align: left; padding-left: 40px;">In der Regel werden die oben genannten Daten zwei Wochen gespeichert und danach automatisch gelöscht. Wir geben diese Daten nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten von Behörden eingesehen werden.</p>
+<p style="text-align: left; padding-left: 40px;"><strong>Kurz gesagt:</strong> Ihr Besuch wird durch unseren Provider (Firma, die unsere Website auf speziellen Computern (Servern) laufen lässt), protokolliert, aber wir geben Ihre Daten nicht ohne Zustimmung weiter!</p>
+<h3 style="text-align: left; padding-left: 40px;">Rechtsgrundlage</h3>
+<p style="text-align: left; padding-left: 40px;">Die Rechtmäßigkeit der Verarbeitung personenbezogener Daten im Rahmen des Webhosting ergibt sich aus Art. 6 Abs. 1 lit. f DSGVO (Wahrung der berechtigten Interessen), denn die Nutzung von professionellem Hosting bei einem Provider ist notwendig, um das Unternehmen im Internet sicher und nutzerfreundlich präsentieren und Angriffe und Forderungen hieraus gegebenenfalls verfolgen zu können.</p>
+<p style="text-align: left; padding-left: 40px;">Zwischen uns und dem Hosting-Provider besteht in der Regel ein Vertrag über die Auftragsverarbeitung gemäß Art. 28 f. DSGVO, der die Einhaltung von Datenschutz gewährleistet und Datensicherheit garantiert.</p>
+<h2 style="text-align: left; padding-left: 40px;">World4You Datenschutzerklärung</h2>
+<p style="text-align: left; padding-left: 40px;">Wir nutzen für unsere Website <span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;World4You&quot;&#125;" data-sheets-userformat="{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0&#125;,&quot;11&quot;:3,&quot;12&quot;:0&#125;">World4You</span>, unter anderem ein Webhosting-Anbieter. Dienstanbieter ist das österreichische Unternehmen <span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;World4You Internet Services GmbH, Hafenstraße 35, 4020 Linz, Österreich.&quot;&#125;" data-sheets-userformat="{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0&#125;,&quot;11&quot;:3,&quot;12&quot;:0&#125;">World4You Internet Services GmbH, Hafenstraße 35, 4020 Linz, Österreich.</span> Mehr über die Daten, die durch die Verwendung von <span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;World4You&quot;&#125;" data-sheets-userformat="{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0&#125;,&quot;11&quot;:3,&quot;12&quot;:0&#125;">World4You</span> verarbeitet werden, erfahren Sie in der Datenschutzerklärung auf <a href="https://www.world4you.com/de/unternehmen/datenschutzerklaerung.html" target="_blank" rel="follow noopener">https://www.world4you.com/de/unternehmen/datenschutzerklaerung.html</a>.</p>
+<p style="text-align: left; padding-left: 40px;">&nbsp;</p>
+<h2 style="text-align: left; padding-left: 40px;">Website Baukastensysteme Einleitung</h2>
+<table style="margin-left: 40px; margin-right: auto;" border="1" cellpadding="15">
+<tbody style="padding-left: 40px;">
+<tr style="padding-left: 40px;">
+<td style="padding-left: 40px;"><strong>Website Baukastensysteme Datenschutzerklärung Zusammenfassung</strong> <br>👥 Betroffene: Besucher der Website<br>🤝 Zweck: Optimierung unserer Serviceleistung<br>📓 Verarbeitete Daten: Daten wie etwa technische Nutzungsinformationen wie Browseraktivität, Clickstream-Aktivitäten, Sitzungs-Heatmaps sowie Kontaktdaten, IP-Adresse oder Ihr geografischer Standort. Mehr Details dazu finden Sie weiter unten in dieser Datenschutzerklärung und in der Datenschutzerklärung der Anbieter.<br>📅 Speicherdauer: hängt vom Anbieter ab<br>⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen), Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: left; padding-left: 40px;">Was sind Website Baukastensysteme?</h3>
+<p style="text-align: left; padding-left: 40px;">Wir verwenden für unsere Website ein Website Baukastensystem. Baukastensysteme sind besondere Formen eines Content-Management-Systems (CMS). Mit einem Baukastensystem können Websitebetreiber sehr leicht und ohne Programmierkenntnisse eine Website erstellen. In vielen Fällen bieten auch Webhoster Baukastensysteme an. Durch die Verwendung eines Baukastensystems können auch personenbezogene Daten von Ihnen erhoben, gespeichert und verarbeitet werden. In diesem Datenschutztext geben wir Ihnen allgemeine Informationen über die Datenverarbeitung durch Baukastensysteme. Nähere Informationen finden Sie in den Datenschutzerklärungen des Anbieters.</p>
+<h3 style="text-align: left; padding-left: 40px;">Warum verwenden wir Website Baukastensysteme für unsere Website?</h3>
+<p style="text-align: left; padding-left: 40px;">Der größte Vorteil eines Baukastensystems ist die einfache Bedienbarkeit. Wir wollen Ihnen eine klare, einfache und übersichtliche Website bieten, die wir selbst – ohne externe Unterstützung – problemlos bedienen und warten können. Ein Baukastensystem bietet mittlerweile viele hilfreiche Funktionen, die wir auch ohne Programmierkenntnisse anwenden können. Dadurch können wir unsere Webpräsenz nach unseren Wünschen gestalten und Ihnen eine informative und angenehme Zeit auf unserer Website bieten.</p>
+<h3 style="text-align: left; padding-left: 40px;">Welche Daten werden von einem Baukastensystem gespeichert?</h3>
+<p style="text-align: left; padding-left: 40px;">Welche Daten genau gespeichert werden hängt natürlich vom verwendeten Website-Baukastensystem ab. Jeder Anbieter verarbeitet und erhebt unterschiedliche Daten des Websitebesuchers. Doch in der Regel werden technische Nutzungsinformationen wie etwa etwa Betriebssystem, Browser, Bildschirmauflösung, Sprach- und Tastatureinstellungen, Hostinganbieter und das Datum Ihres Websitebesuches erhoben. Weiter können auch Trackingdaten (z.B. Browseraktivität, Clickstreamaktivitäten, Sitzungs-Heatmaps u.a.) verarbeitet werden. Zudem können auch personenbezogene Daten erfasst und gespeichert werden. Dabei handelt es sich meistens um Kontaktdaten wie E-Mail-Adresse, Telefonnummer (falls Sie diese angegeben haben), IP-Adresse und geografischen Standortdaten. Welche Daten genau gespeichert werden, finden Sie in der Datenschutzerklärung des Anbieters.</p>
+<h3 style="text-align: left; padding-left: 40px;">Wie lange und wo werden die Daten gespeichert?</h3>
+<p style="text-align: left; padding-left: 40px;">Über die Dauer der Datenverarbeitung informieren wir Sie weiter unten im Zusammenhang mit dem verwendeten Website Baukastensystem, sofern wir weitere Informationen dazu haben. In den Datenschutzerklärung des Anbieters finden Sie detaillierte Informationen darüber. Generell verarbeiten wir personenbezogene Daten nur so lange wie es für die Bereitstellung unserer Dienstleistungen und Produkte unbedingt notwendig ist. Es kann sein, dass der Anbieter nach eigenen Maßgaben Daten von Ihnen speichert, worauf wir keinen Einfluss haben.</p>
+<h3 style="text-align: left; padding-left: 40px;">Widerspruchsrecht</h3>
+<p style="text-align: left; padding-left: 40px;">Sie haben immer das Recht auf Auskunft, Berichtigung und Löschung Ihrer personenbezogenen Daten. Bei Fragen können Sie auch jederzeit Verantwortliche des verwendeten Website Baukastensystems kontaktieren. Kontaktdaten finden Sie entweder in unserer Datenschutzerklärung oder auf der Website des entsprechenden Anbieters.</p>
+<p style="text-align: left; padding-left: 40px;">Cookies, die Anbieter für ihre Funktionen verwenden, können Sie in Ihrem Browser löschen, deaktivieren oder verwalten. Je nachdem welchen Browser Sie verwenden, funktioniert dies auf unterschiedliche Art und Weise. Bitte beachten Sie aber, dass dann eventuell nicht mehr alle Funktionen wie gewohnt funktionieren.</p>
+<h3 style="text-align: left; padding-left: 40px;">Rechtsgrundlage</h3>
+<p style="text-align: left; padding-left: 40px;">Wir haben ein berechtigtes Interesse daran, ein Website Baukastensystem zu verwenden, um unseren Online-Service zu optimieren und für Sie effizient und nutzeransprechend darzustellen. Die dafür entsprechende Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen). Wir setzen den Baukasten gleichwohl nur ein, soweit Sie eine Einwilligung erteilt haben.</p>
+<p style="text-align: left; padding-left: 40px;">Soweit die Verarbeitung von Daten für den Betrieb der Webseite nicht unbedingt notwendig ist, werden die Daten nur auf Grundlage Ihrer Einwilligung verarbeitet. Dies betrifft insbesondere Aktivitäten des Trackings. Rechtsgrundlage ist insoweit Art. 6 Abs. 1 lit. a DSGVO.</p>
+<p style="text-align: left; padding-left: 40px;">Mit dieser Datenschutzerklärung haben wir Ihnen die wichtigsten allgemeinen Informationen rund um die Datenverarbeitung nähergebracht. Wenn Sie sich diesbezüglich noch genauer informieren wollen, finden Sie weitere Informationen – sofern vorhanden – in dem folgenden Abschnitt bzw. in der Datenschutzerklärung des Anbieters.</p>
+<h2 style="text-align: left; padding-left: 40px;">World4You Baukasten Datenschutzerklärung</h2>
+<p style="text-align: left; padding-left: 40px;">Wir nutzen für unsere Website World4You, ein Website Baukastensystem. Dienstanbieter ist das österreichische Unternehmen World4You Internet Services GmbH, Hafenstraße 35, 4020 Linz, Österreich. Mehr über die Daten, die durch die Verwendung von World4You verarbeitet werden, erfahren Sie in der Datenschutzerklärung auf <a href="https://www.world4you.com/de/unternehmen/datenschutzerklaerung.html" target="_blank" rel="noopener">https://www.world4you.com/de/unternehmen/datenschutzerklaerung.html</a>.</p>
+<h2 style="text-align: left; padding-left: 40px;">E-Mail-Marketing Einleitung</h2>
+<table style="margin-left: 40px; margin-right: auto;" border="1" cellpadding="15">
+<tbody style="padding-left: 40px;">
+<tr style="padding-left: 40px;">
+<td style="padding-left: 40px;"><strong>E-Mail-Marketing Zusammenfassung</strong> <br>👥 Betroffene: Newsletter-Abonnenten<br>🤝 Zweck: Direktwerbung per E-Mail, Benachrichtigung über systemrelevante Ereignisse<br>📓 Verarbeitete Daten: Eingegebene Daten bei der Registrierung jedoch mindestens die E-Mail-Adresse. Mehr Details dazu finden Sie beim jeweils eingesetzten E-Mail-Marketing-Tool.<br>📅 Speicherdauer: Dauer des Bestehens des Abonnements<br>⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), Art. 6 Abs. 1 lit. f DSGVO (berechtigte Interessen)</td>
+</tr>
+</tbody>
+</table>
+<h3 style="text-align: left; padding-left: 40px;">Was ist E-Mail-Marketing?</h3>
+<p style="text-align: left; padding-left: 40px;">Um Sie stets auf dem Laufenden zu halten, nutzen wir auch die Möglichkeit des E-Mail-Marketings. Dabei werden, sofern Sie dem Empfang unserer E-Mails bzw. Newsletter zugestimmt haben, auch Daten von Ihnen verarbeitet und gespeichert. E-Mail-Marketing ist ein Teilbereich des Online-Marketings. Dabei werden Neuigkeiten oder allgemeine Informationen über ein Unternehmen, Produkte oder Dienstleistungen per E-Mail an eine bestimmte Gruppe an Menschen, die sich dafür interessieren, gesendet.</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie an unserem E-Mail-Marketing (meist per Newsletter) teilnehmen wollen, müssen Sie sich im Normalfall einfach nur mit Ihrer E-Mail-Adresse anmelden. Dafür füllen Sie ein Online-Formular aus und senden es ab. Es kann aber auch vorkommen, dass wir Sie etwa um Ihre Anrede und Ihren Namen bitten, damit wir Sie auch persönlich anschreiben können.</p>
+<p style="text-align: left; padding-left: 40px;">Grundsätzlich funktioniert das Anmelden zu Newslettern mit Hilfe des sogenannten „Double-Opt-In-Verfahrens“. Nachdem Sie sich für unseren Newsletter auf unserer Website angemeldet haben, bekommen Sie eine E-Mail, über die Sie die Newsletter-Anmeldung bestätigen. So wird sichergestellt, dass Ihnen die E-Mail-Adresse gehört und sich niemand mit einer fremden E-Mail-Adresse angemeldet hat. Wir oder ein von uns verwendetes Benachrichtigungs-Tool protokolliert jede einzelne Anmeldung. Dies ist nötig, damit wir den rechtlich korrekten Anmeldevorgang auch nachweisen können. Dabei wird in der Regel der Zeitpunkt der Anmeldung, der Zeitpunkt der Anmeldebestätigung und Ihre IP-Adresse gespeichert. Zusätzlich wird auch protokolliert, wenn Sie Änderungen Ihrer gespeicherten Daten vornehmen.</p>
+<h3 style="text-align: left; padding-left: 40px;">Warum nutzen wir E-Mail-Marketing?</h3>
+<p style="text-align: left; padding-left: 40px;">Wir wollen natürlich mit Ihnen in Kontakt bleiben und Ihnen stets die wichtigsten Neuigkeiten über unser Unternehmen präsentieren. Dafür nutzen wir unter anderem E-Mail-Marketing – oft auch nur “Newsletter” bezeichnet – als wesentlichen Bestandteil unseres Online-Marketings. Sofern Sie sich damit einverstanden erklären oder es gesetzlich erlaubt ist, schicken wir Ihnen Newsletter, System-E-Mails oder andere Benachrichtigungen per E-Mail. Wenn wir im folgenden Text den Begriff „Newsletter“ verwenden, meinen wir damit hauptsächlich regelmäßig versandte E-Mails. Natürlich wollen wir Sie mit unseren Newsletter in keiner Weise belästigen. Darum sind wir wirklich stets bemüht, nur relevante und interessante Inhalte zu bieten. So erfahren Sie etwa mehr über unser Unternehmen, unsere Leistungen oder Produkte. Da wir unsere Angebote auch immer verbessern, erfahren Sie über unseren Newsletter auch immer, wenn es Neuigkeiten gibt oder wir gerade spezielle, lukrative Aktionen anbieten. Sofern wir einen Dienstleister, der ein professionelles Versand-Tool anbietet, für unser E-Mail-Marketing beauftragen, machen wir das, um Ihnen schnelle und sichere Newsletter bieten zu können. Zweck unseres E-Mail-Marketings ist grundsätzlich, Sie über neue Angebote zu informieren und auch unseren unternehmerischen Zielen näher zu kommen.</p>
+<h3 style="text-align: left; padding-left: 40px;">Welche Daten werden verarbeitet?</h3>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie über unsere Website Abonnent unseres Newsletters werden, bestätigen Sie per E-Mail die Mitgliedschaft in einer E-Mail-Liste. Neben IP-Adresse und E-Mail-Adresse können auch Ihre Anrede, Ihr Name, Ihre Adresse und Ihre Telefonnummer gespeichert werden. Allerdings nur, wenn Sie dieser Datenspeicherungen zustimmen. Die als solche markierten Daten sind notwendig, damit Sie an dem angebotenen Dienst teilnehmen können. Die Angabe ist freiwillig, die Nichtangabe führt jedoch dazu, dass Sie den Dienst nicht nutzen können. Zusätzlich können etwa auch Informationen zu Ihrem Gerät oder zu Ihren bevorzugten Inhalten auf unserer Website gespeichert werden. Mehr zur Speicherung von Daten, wenn Sie eine Website besuchen, finden Sie im Abschnitt “Automatische Datenspeicherung”. Ihre Einwilligungserklärung zeichnen wir auf, damit wir stets nachweisen können, dass dieser unseren Gesetzen entspricht.</p>
+<h3 style="text-align: left; padding-left: 40px;">Dauer der Datenverarbeitung</h3>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie Ihre E-Mail-Adresse aus unserem E-Mail/Newsletter-Verteiler austragen, dürfen wir Ihre Adresse bis zu drei Jahren auf Grundlage unserer berechtigten Interessen speichern, damit wir Ihre damalige Einwilligung noch nachweisen können. Verarbeiten dürfen wir diese Daten nur, wenn wir uns gegen etwaige Ansprüche wehren müssen.</p>
+<p style="text-align: left; padding-left: 40px;">Wenn Sie allerdings bestätigen, dass Sie uns die Einwilligung zur Newsletter-Anmeldung gegeben haben, können Sie jederzeit einen individuellen Löschantrag stellen. Widersprechen Sie der Einwilligung dauerhaft, behalten wir uns das Recht vor, Ihre E-Mail-Adresse in einer Sperrliste zu speichern. Solange Sie freiwillig unseren Newsletter abonniert haben, solange behalten wir selbstverständlich auch Ihre E-Mail-Adresse.</p>
+<h3 style="text-align: left; padding-left: 40px;">Widerspruchsrecht</h3>
+<p style="text-align: left; padding-left: 40px;">Sie haben jederzeit die Möglichkeit Ihre Newsletter-Anmeldung zu kündigen. Dafür müssen Sie lediglich Ihre Einwilligung zur Newsletter-Anmeldung widerrufen. Das dauert im Normalfall nur wenige Sekunden bzw. einen oder zwei Klicks. Meistens finden Sie direkt am Ende jeder E-Mail einen Link, um das Newsletter-Abonnement zu kündigen. Wenn der Link im Newsletter wirklich nicht zu finden ist, kontaktieren Sie uns bitte per Mail und wir werden Ihr Newsletter-Abo unverzüglich kündigen.</p>
+<h3 style="text-align: left; padding-left: 40px;">Rechtsgrundlage</h3>
+<p style="text-align: left; padding-left: 40px;">Das Versenden unseres Newsletters erfolgt auf Grundlage Ihrer <strong>Einwilligung</strong> (Artikel 6 Abs. 1 lit. a DSGVO). Das heißt, wir dürfen Ihnen nur dann einen Newsletter schicken, wenn Sie sich zuvor aktiv dafür angemeldet haben. Gegebenenfalls können wir Ihnen auch Werbenachrichten auf Grundlage des § 7 Abs. 3 UWG senden, sofern Sie unser Kunde geworden sind und der Verwendung ihrer E-Mailadresse für Direktwerbung nicht widersprochen haben.</p>
+<p style="text-align: left; padding-left: 40px;">Informationen zu speziellen E-Mail-Marketing Diensten und wie diese personenbezogene Daten verarbeiten, erfahren Sie – sofern vorhanden – in den folgenden Abschnitten.</p>
+<h2 style="text-align: left; padding-left: 40px;">Auftragsverarbeiter</h2>
+<p style="text-align: left; padding-left: 40px;"><strong>Begriffsbestimmung nach Artikel 4 der DSGVO</strong></p>
+<p style="text-align: left; padding-left: 40px;">Im Sinne dieser Verordnung bezeichnet der Ausdruck:</p>
+<blockquote style="padding-left: 40px;">
+<p style="padding-left: 40px;"><em> <strong>„Auftragsverarbeiter“</strong> eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet;</em></p>
+</blockquote>
+<p style="text-align: left; padding-left: 40px;"><strong>Erläuterung:</strong> Wir sind als Unternehmen und Websiteinhaber für alle Daten, die wir von Ihnen verarbeiten verantwortlich. Neben den Verantwortlichen kann es auch sogenannte Auftragsverarbeiter geben. Dazu zählt jedes Unternehmen bzw. jede Person, die in unserem Auftrag personenbezogene Daten verarbeitet. Auftragsverarbeiter können folglich, neben Dienstleistern wie Steuerberater, etwa auch Hosting- oder Cloudanbieter, Bezahlungs- oder Newsletter-Anbieter oder große Unternehmen wie beispielsweise Google oder Microsoft sein.</p>
+<h2 style="text-align: left; padding-left: 40px;">Verantwortlicher</h2>
+<p style="text-align: left; padding-left: 40px;"><strong>Begriffsbestimmung nach Artikel 4 der DSGVO</strong></p>
+<p style="text-align: left; padding-left: 40px;">Im Sinne dieser Verordnung bezeichnet der Ausdruck:</p>
+<blockquote style="padding-left: 40px;">
+<p style="padding-left: 40px;"><em> <strong>„Verantwortlicher“</strong> die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet; sind die Zwecke und Mittel dieser Verarbeitung durch das Unionsrecht oder das Recht der Mitgliedstaaten vorgegeben, so kann der Verantwortliche beziehungsweise können die bestimmten Kriterien seiner Benennung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden;</em></p>
+</blockquote>
+<p style="text-align: left; padding-left: 40px;"><strong>Erläuterung:</strong> In unserem Fall sind wir für die Verarbeitung Ihrer personenbezogenen Daten verantwortlich und folglich der “Verantwortliche”. Wenn wir erhobene Daten zur Verarbeitung an andere Dienstleister weitergeben, sind diese “Auftragsverarbeiter”. Dafür muss ein “Auftragsverarbeitungsvertrag (AVV)” unterzeichnet werden.</p>
+<p style="text-align: left; padding-left: 40px;">&nbsp;</p>
+<p style="text-align: left; padding-left: 40px;">Alle Texte sind urheberrechtlich geschützt.</p>
+<p style="text-align: left; padding-left: 40px;">Quelle: Erstellt mit dem <a title="Datenschutz Generator von AdSimple für Österreich" href="https://www.adsimple.at/datenschutz-generator/">Datenschutz Generator</a> von AdSimple</p>
+<p style="text-align: left; padding-left: 40px;">&nbsp;</p>
+<p style="text-align: left; padding-left: 40px;">Zusatz Egger Möbelplaner:</p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">Anwendung EGGER inside Möbelplaner (Mobelplaner und Möbelplaner PRO) </span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">Der Möbelplaner ist eine Anwendung, mit der Sie ein Möbelstück nach Ihren individuellen Bedűrnissen erstellen können. Diese Anwendung wird von einem externen Dienstleister, der EGGER Holzwerkstoffe Brilon GmbH&amp;Co KG, zur Verfügung gestelt: Wenn Sie im Mobelplaner eine Angebotsanfrage vornehmen mochten ist die Angabe Ihrer personlichen Daten für die Bearbeitung und die Abwicklung der Angebotsanfrage erforderlich. Entsprechende Pflichtfelder sind für die Erstellung eines Angebots notwendig und gekennzeichnet. lhre Daten werden füir die Dauer der Bearbeitung hres Angebots gespeichert, sofern keine Aufbewahrungsfristen diesem entgegenstehen. Rechtsgrundlage hierfür ist die Vertragsanbahnung gem. Art. 6 Abs. 1 lit.b DSGVO. </span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">Darüber hinaus können die obigen Daten zur Bereitstellung von anonymisierten Reportings über die Nutzung des Möbelplaners verwendet werden. Neben diesen können weitere Daten zu Analysezwecken erhoben werden. Hierfür ist der Betreiber des Möbelplaners verantwortlich. Weitere Informationen hierzu finden Sie unter <a href="http://www.egger-inside.com">www.egger-inside.com</a>. </span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">Damit Sie die Moglichkeit haben, Ihr geplantes Möbelstück jederzeit zu speichern und zu einem späteren Zeitpunkt weiter zu bearbeiten, ohne eine Angebotsanfrage direkt abzuschicken, benotigen wir für die Speicherung die Angabe Ihrer personlichen Daten notwendig (Vor-und Nachname, Firma/Adresszusatz Strasse, Nr., PLZ, Ort, E-Mail Adresse, Tel. Nr). Alternativ kann wahrend des Vorganges ein passwortgeschütztes Kundenkonto eingerichtet werden. Im Rahmen der Registrierung werden zusätzlich erhoben: IP-Adresse, Endgerättyp, Grafikauflosung, Datum und Uhrzeit der Registrierung und die Verweildauer. Rechtsgrundlage ist dann lhre Einwilligung gem. Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Ihr Account und gespeicherten Möbelstücke werden dann gelöscht., </span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">Die Daten werden geloscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. Dies ist für die während des Registrierungsvorgangs zur Bearbeitung der Angebotsanfrage sowie zur Durchführung vorvertraglicher Maßnahmen abgegebenen Daten dann der Fall, wenn die Daten für die Durchführung der Angebotsanfrage, der Bestellung oder des sich evtl. anschließenden Vertrages nicht mehr erforderlich sind. Auch nach Abschluss des Vertrags kann eine Erforderlichkeit, personenbezogene Daten des Vertragspartners zu speichern, bestehen, um vertraglichen oder gesetzlichen Verpflichtungen nachzukommen. Wir sind aufgrund handels- und steuerrechtlicher Vorgaben verpflichtet, Ihre Adress-, Zahlungs- und Bestelldaten für die Dauer von 10 Jahren zu speichern. </span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">Ihre Daten werden über die Anwendung des Mobelplaners an den Betreiber EGGER Holzwerkstoffe Brilon GmbH&amp;Co KG, Im Kissen 19, D-59929, Brilon übermittelt, gespeichert und zur Abwicklung lhrer Angebotsanfrage bzw. zur Vertragserfüllung verarbeitet. Zwecks Gewährleistung und Sicherstellung des datenschutzrechtlich-konformen Umgangs mit Ihren Daten haben wir mit EGGER einen Vertrag zur Auftragsverarbeitung abgeschlossen. Zur Verhinderung unberechtigter Zugriffe Dritter auf Ihre persönlichen Daten, insbesondere Finanzdaten, wird der Bestellvorgang per TLS-Technik verschlüsselt. </span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">&nbsp;</span></p>
+<p><span style="mso-fareast-font-family: &apos;Times New Roman&apos;;">&nbsp;</span></p>
+</div>
+</div>
+<div>
+<h2>FÜHRUNGSBESTÄTIGUNG</h2>
+<div>
+<p>Tischlerei Hicker GmbH<br>mit Standort<br>Schießstättenstraße 1<br>3032 Eichgraben<br>wird im<br>Kalenderjahr 2026<br>ANKÕ<br>gemäß den Bestimmungen des BVergG i.d.g.F., der ÖNORM A 2053:2019-02 und den<br>Richtlinien 2014/24/EU sowie 2014/25/EU im Auftragnehmerkataster Österreich geführt.<br>Die Eignungsnachweise des Unternehmens sind für den öffentlichen Auftraggeber unter<br>dem<br>Firmencode<br>51606<br>zur Eignungsprüfung abrufbar.<br>Die Aktualität der für ein Vergabeverfahren erforderlichen Eignungsnachweise liegt im<br>Verantwortungsbereich des Unternehmens.</p>
+<p><img src="assets/ankoe.png" loading="lazy" alt="" width="600" height="850">ANKÖ - Liste geeigneter Unternehmen®</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="f-wrap">
+    <span>© 2026 Tischlerei Hicker GmbH · Schießstättenstraße 1, 3032 Eichgraben · <a href="tel:+43277343347">+43 2773 43347</a></span>
+    <span><a href="index.html">Startseite</a> · <a href="moebelplaner.html">Möbelplaner</a> · <a href="ankoe.html">ANKÖ</a></span>
+  </div>
+</footer>
+</body>
+</html>

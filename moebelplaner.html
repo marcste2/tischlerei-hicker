@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Möbelplaner · Tischlerei Hicker</title>
+<meta name="description" content="Planen Sie Ihr Möbelstück am Bildschirm: der Möbelplaner der Tischlerei Hicker in Eichgraben.">
+<meta name="theme-color" content="#191310">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono&family=Instrument+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --canvas:#191310;--panel:#241b15;--panel2:#2b211a;
+  --accent:#d99a4e;--accent-hover:#e8b066;--accent-muted:#8a5f33;
+  --text-primary:#f4ecdf;--text-secondary:#cbbba6;--text-dim:#a4947e;
+  --line:rgba(212,178,134,.15);--line-strong:rgba(217,154,78,.55);
+  --ease:cubic-bezier(.22,.61,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden;overflow-x:clip}
+body{background:var(--canvas);color:var(--text-primary);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--accent);color:#1c1206;padding:10px 16px;border-radius:8px;font-weight:500;transition:top .25s var(--ease)}
+.skip:focus{top:12px;color:#1c1206}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:28px;padding:12px clamp(18px,4vw,44px);background:rgba(25,19,16,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text-primary)}
+.brand:hover{color:var(--text-primary)}
+.brand .logo-img{height:46px;width:auto;flex:none}
+.brand-name{font-family:"Fraunces",serif;font-size:19px;white-space:nowrap}
+.brand-name b{font-weight:600}
+.nav-links{display:flex;gap:26px;margin-left:auto;align-items:baseline}
+.nav-links a{color:var(--text-secondary);font-size:15px;transition:color .3s var(--ease)}
+.nav-links a:hover{color:var(--text-primary)}
+.nav .btn{margin-left:8px}
+@media (max-width:900px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+.btn{display:inline-block;background:var(--accent);color:#1c1206;font-weight:500;font-size:15.5px;padding:12px 24px;border-radius:10px;border:1px solid transparent;cursor:pointer;transition:background .3s var(--ease),transform .3s var(--ease)}
+.btn:hover{background:var(--accent-hover);color:#1c1206;transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--text-primary);border-color:var(--line-strong)}
+.btn-secondary:hover{background:rgba(217,154,78,.1);color:var(--text-primary)}
+@media (pointer:coarse){.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
+main{display:block}
+.page-head{padding:clamp(54px,8vw,90px) clamp(20px,5vw,60px) 0}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(30px,4.4vw,52px);line-height:1.12}
+.lede{color:var(--text-secondary);margin-top:16px;font-size:clamp(16px,1.4vw,19px);max-width:58ch}
+.content{padding:clamp(36px,5vw,60px) clamp(20px,5vw,60px) clamp(70px,9vw,120px)}
+.planner-gate{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:860px}
+.planner-gate img{width:100%;height:320px;object-fit:cover;filter:sepia(.14) contrast(1.02)}
+.planner-gate .txt{padding:28px 30px 32px}
+.planner-gate h2{font-family:"Fraunces",serif;font-weight:600;font-size:23px;margin-bottom:8px}
+.planner-gate p{color:var(--text-secondary);max-width:62ch;margin-bottom:10px}
+.planner-gate .legal{font-size:12.5px;color:var(--text-dim);margin:14px 0 20px}
+.planner-frame{display:none;margin-top:8px}
+.planner-frame.on{display:block}
+.planner-frame iframe{width:100%;height:min(78vh,900px);border:1px solid var(--line);border-radius:14px;background:#fff}
+.planner-note{font-size:12.5px;color:var(--text-dim);margin-top:10px}
+footer{border-top:1px solid var(--line);padding:40px clamp(20px,5vw,60px) 36px}
+.f-wrap{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;font-size:13.5px;color:var(--text-dim)}
+.f-wrap a{color:var(--text-secondary)}
+.f-wrap a:hover{color:var(--accent-hover)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<nav class="nav" aria-label="Hauptnavigation">
+  <a class="brand" href="index.html" aria-label="Tischlerei Hicker, zur Startseite">
+    <img class="logo-img" src="assets/logo-full.png" alt="" width="49" height="46">
+    <span class="brand-name">Tischlerei <b>Hicker</b></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#leistungen">Leistungen</a>
+    <a href="index.html#ablauf">Ablauf</a>
+    <a href="index.html#ueber">Über uns</a>
+    <a href="index.html#stimmen">Stimmen</a>
+  </div>
+  <a class="btn" href="index.html#kontakt">Projekt anfragen</a>
+</nav>
+
+<main id="main" tabindex="-1">
+  <div class="page-head">
+    <div class="wrap">
+      <p class="sec-kicker mono">Möbelplaner</p>
+      <h1>Sehen, bevor es gebaut ist.</h1>
+      <p class="lede">Mit unserem Möbelplaner planen Sie Ihr Stück direkt am Bildschirm: Maße, Material und Aufteilung. Das Ergebnis besprechen wir dann gemeinsam.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="wrap">
+      <div class="planner-gate" id="gate">
+        <img src="assets/planung.jpg" alt="Wolfgang Hicker plant ein Möbelstück am Bildschirm">
+        <div class="txt">
+          <h2>Möbelplaner starten</h2>
+          <p>Der Planer öffnet sich direkt hier auf der Seite. Ihre Planung können Sie am Ende an uns schicken.</p>
+          <p class="legal">Der Möbelplaner wird über einen sogenannten iFrame eingebunden. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG. Mit dem Klick auf den Knopf stimmen Sie der Einbindung zu.</p>
+          <button class="btn" id="loadPlanner">Möbelplaner laden</button>
+          <a class="btn btn-secondary" href="https://egger-moebelplaner.tischlereihicker.at" style="margin-left:10px">In neuem Fenster öffnen</a>
+        </div>
+      </div>
+      <div class="planner-frame" id="frame">
+        <iframe title="Möbelplaner der Tischlerei Hicker" loading="lazy" allowfullscreen></iframe>
+        <p class="planner-note">Der Planer läuft am besten auf einem großen Bildschirm. <a href="https://egger-moebelplaner.tischlereihicker.at">Hier geht es zur Vollbild-Version.</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="f-wrap">
+    <span>© 2026 Tischlerei Hicker GmbH · Schießstättenstraße 1, 3032 Eichgraben · <a href="tel:+43277343347">+43 2773 43347</a></span>
+    <span><a href="index.html">Startseite</a> · <a href="ankoe.html">ANKÖ</a> · <a href="impressum.html">Impressum</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('loadPlanner').addEventListener('click',function(){
+  var frame=document.getElementById('frame');
+  frame.querySelector('iframe').src='https://egger-moebelplaner.tischlereihicker.at';
+  frame.classList.add('on');
+  document.getElementById('gate').style.display='none';
+  frame.scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script>
+</body>
+</html>
