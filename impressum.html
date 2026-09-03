@@ -39,7 +39,17 @@ a:hover{color:var(--accent-hover)}
 .nav-links a{color:var(--text-secondary);font-size:15px;transition:color .3s var(--ease)}
 .nav-links a:hover{color:var(--text-primary)}
 .nav .btn{margin-left:8px}
-@media (max-width:900px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+.nav-burger{display:none;width:44px;height:44px;margin-left:auto;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:rgba(25,19,16,.4);border:1px solid var(--line-strong);border-radius:10px;cursor:pointer;padding:0}
+.nav-burger span{display:block;width:20px;height:2px;background:var(--text-primary);transition:transform .35s var(--ease)}
+.nav-burger.open span:first-child{transform:translateY(4.5px) rotate(45deg)}
+.nav-burger.open span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+@media (max-width:900px){.nav-links,.nav .btn{display:none}.nav-burger{display:flex}}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(21,15,12,.97);display:flex;flex-direction:column;justify-content:center;padding:90px clamp(26px,8vw,50px) 40px;opacity:0;pointer-events:none;transform:translateY(-10px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.mobile-menu.open{opacity:1;pointer-events:auto;transform:none}
+.mobile-menu a{font-family:"Fraunces",serif;font-weight:600;font-size:27px;color:var(--text-primary);padding:12px 0;border-bottom:1px solid var(--line)}
+.mobile-menu .mm-tel{font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:16px;color:var(--text-secondary);border-bottom:0;margin-top:12px}
+body.menu-open{overflow:hidden}
+@media (min-width:901px){.mobile-menu{display:none}}
 .btn{display:inline-block;background:var(--accent);color:#1c1206;font-weight:500;font-size:15.5px;padding:12px 24px;border-radius:10px;cursor:pointer;transition:background .3s var(--ease),transform .3s var(--ease);border:1px solid transparent}
 .btn:hover{background:var(--accent-hover);color:#1c1206;transform:translateY(-1px)}
 @media (pointer:coarse){.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
@@ -82,7 +92,16 @@ footer{border-top:1px solid var(--line);padding:40px clamp(20px,5vw,60px) 36px}
     <a href="index.html#stimmen">Stimmen</a>
   </div>
   <a class="btn" href="index.html#kontakt">Projekt anfragen</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Startseite</a>
+  <a href="index.html#leistungen">Leistungen</a>
+  <a href="index.html#ablauf">Ablauf</a>
+  <a href="index.html#ueber">Über uns</a>
+  <a href="index.html#kontakt">Kontakt</a>
+  <a class="mm-tel" href="tel:+43277343347">+43 2773 43347</a>
+</div>
 
 <main id="main" tabindex="-1">
   <div class="page-head">
@@ -494,5 +513,20 @@ footer{border-top:1px solid var(--line);padding:40px clamp(20px,5vw,60px) 36px}
     <span><a href="index.html">Startseite</a> · <a href="moebelplaner.html">Möbelplaner</a> · <a href="ankoe.html">ANKÖ</a></span>
   </div>
 </footer>
+<script>
+(function(){
+var burger=document.getElementById('navBurger');
+var mMenu=document.getElementById('mobileMenu');
+function setMenu(open){
+  burger.classList.toggle('open',open);
+  mMenu.classList.toggle('open',open);
+  document.body.classList.toggle('menu-open',open);
+  burger.setAttribute('aria-expanded',open?'true':'false');
+}
+burger.addEventListener('click',function(){setMenu(!mMenu.classList.contains('open'))});
+mMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&mMenu.classList.contains('open'))setMenu(false)});
+})();
+</script>
 </body>
 </html>

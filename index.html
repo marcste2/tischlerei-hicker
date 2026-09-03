@@ -88,7 +88,31 @@ a:hover{color:var(--accent-hover)}
 .nav-links a:hover{color:var(--text-primary)}
 .nav-tel{color:var(--text-dim);font-size:13.5px;margin-left:6px;white-space:nowrap}
 .nav .btn{margin-left:8px}
-@media (max-width:900px){.nav-links,.nav-tel{display:none}.nav .btn{margin-left:auto}}
+.nav-burger{display:none;width:44px;height:44px;margin-left:auto;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:7px;background:rgba(25,19,16,.4);border:1px solid var(--line-strong);border-radius:10px;cursor:pointer;padding:0}
+.nav-burger span{display:block;width:20px;height:2px;background:var(--text-primary);transition:transform .35s var(--ease)}
+.nav-burger.open span:first-child{transform:translateY(4.5px) rotate(45deg)}
+.nav-burger.open span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+@media (max-width:900px){
+  .nav-links,.nav-tel,.nav .btn{display:none}
+  .nav-burger{display:flex}
+  .brand .logo-img{height:46px}
+  .nav.scrolled .logo-img{height:40px}
+  .brand-name{font-size:17px}
+}
+.mobile-menu{
+  position:fixed;inset:0;z-index:99;background:rgba(21,15,12,.97);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:90px clamp(26px,8vw,50px) 40px;
+  opacity:0;pointer-events:none;transform:translateY(-10px);
+  transition:opacity .4s var(--ease),transform .4s var(--ease);
+}
+.mobile-menu.open{opacity:1;pointer-events:auto;transform:none}
+.mobile-menu a{font-family:"Fraunces",serif;font-weight:600;font-size:29px;color:var(--text-primary);padding:13px 0;border-bottom:1px solid var(--line)}
+.mobile-menu a:hover{color:var(--accent-hover)}
+.mobile-menu .mm-tel{font-family:"IBM Plex Mono",monospace;font-weight:400;font-size:16px;color:var(--text-secondary);border-bottom:0;margin-top:12px}
+.mobile-menu .btn{font-family:"Instrument Sans",system-ui,sans-serif;font-size:16px;font-weight:500;border-bottom:0;align-self:flex-start;margin-top:10px;padding:14px 28px;color:#1c1206}
+body.menu-open{overflow:hidden}
+@media (min-width:901px){.mobile-menu{display:none}}
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -215,7 +239,7 @@ a:hover{color:var(--accent-hover)}
 
 /* Static hero (designed, gated) */
 .static-hero{display:none}
-@media (max-width:720px),(orientation:portrait) and (max-width:1024px),(orientation:portrait) and (pointer:coarse),(orientation:landscape) and (pointer:coarse) and (max-height:560px),(prefers-reduced-motion:reduce){
+@media (orientation:landscape) and (pointer:coarse) and (max-height:560px),(prefers-reduced-motion:reduce){
   .hero{height:100vh;height:100svh}
   .bands,.ring,.cue,#heroVid,.dust{display:none}
   .stage{background:var(--canvas) url('assets/hero-poster.jpg') 62% 50%/cover no-repeat}
@@ -230,6 +254,19 @@ a:hover{color:var(--accent-hover)}
   .static-hero .cta-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
 }
 @media (max-height:560px){.cue,.kicker{display:none}}
+@media (max-width:720px){
+  :root{--heroH:640vh}
+  .band{padding:0 20px}
+  .band .h{font-size:clamp(27px,8.6vw,42px)}
+  .band .sub{font-size:15.5px;margin-top:14px}
+  .kicker{font-size:10.5px;letter-spacing:.13em;padding:7px 11px;margin-bottom:16px}
+  .k-street{display:none}
+  .b2,.b4{padding-bottom:12vh}
+  .b5{padding-top:12vh}
+  #heroVid{object-position:58% 50%}
+  .poster{background-position:58% 50%}
+  .cue{bottom:16px}
+}
 
 /* ---------- Sections ---------- */
 main{position:relative;z-index:1;background:var(--canvas)}
@@ -488,7 +525,17 @@ footer{border-top:1px solid var(--line);padding:48px clamp(20px,5vw,60px) 40px;p
   </div>
   <a class="nav-tel mono" href="tel:+43277343347">+43 2773 43347</a>
   <a class="btn" href="#kontakt">Projekt anfragen</a>
+  <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#leistungen">Leistungen</a>
+  <a href="#ablauf">Ablauf</a>
+  <a href="#ueber">Über uns</a>
+  <a href="#stimmen">Stimmen</a>
+  <a href="#kontakt">Kontakt</a>
+  <a class="mm-tel" href="tel:+43277343347">+43 2773 43347</a>
+  <a class="btn" href="#kontakt">Projekt anfragen</a>
+</div>
 </header>
 
 <div class="hero" id="top">
@@ -500,7 +547,7 @@ footer{border-top:1px solid var(--line);padding:48px clamp(20px,5vw,60px) 40px;p
 
     <div class="bands" aria-hidden="true">
       <div class="band b1" data-a="0" data-b="0.14">
-        <p class="kicker mono">Tischlerei Hicker · Schießstättenstraße 1, Eichgraben</p>
+        <p class="kicker mono">Tischlerei Hicker · <span class="k-street">Schießstättenstraße 1, </span>Eichgraben</p>
         <div class="h blur-wrap">
           <div class="soft">Hier entsteht Handwerk.</div>
           <div class="sharp">Hier entsteht Handwerk.</div>
@@ -1090,9 +1137,6 @@ function rampBand1(){
 
 /* ---------- The five gates, live (CSS strings identical) ---------- */
 var GATES=[
-  '(max-width: 720px)',
-  '(orientation: portrait) and (max-width: 1024px)',
-  '(orientation: portrait) and (pointer: coarse)',
   '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
   '(prefers-reduced-motion: reduce)'
 ];
@@ -1266,6 +1310,20 @@ sandStage.addEventListener('keydown',sandStart);
 sandStage.addEventListener('keyup',sandEnd);
 sandStage.addEventListener('blur',sandEnd);
 if(reduceMQ.matches){sandP=1;sandDone=true;applySand()}
+
+/* ---------- Mobile menu ---------- */
+var burger=document.getElementById('navBurger');
+var mMenu=document.getElementById('mobileMenu');
+function setMenu(open){
+  burger.classList.toggle('open',open);
+  mMenu.classList.toggle('open',open);
+  document.body.classList.toggle('menu-open',open);
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  burger.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
+}
+burger.addEventListener('click',function(){setMenu(!mMenu.classList.contains('open'))});
+mMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&mMenu.classList.contains('open'))setMenu(false)});
 
 /* ---------- Nav state ---------- */
 var nav=document.getElementById('nav'),navOn=null;
